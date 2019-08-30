@@ -37,29 +37,29 @@
 				</button>
 				<div class="collapse navbar-collapse" id="xenav">
 					<ul class="navbar-nav ml-auto" id="container">
-						<li class="nav-item">
+						<li class="nav-item text-center">
 							<a class="nav-link active" href="#home">Home</a>
 						</li>
-						<li class="nav-item">
+						<li class="nav-item text-center">
 							<a class="nav-link" href="#features">Features</a>
 						</li>
-						<li class="nav-item">
+						<li class="nav-item text-center">
 							<a class="nav-link" href="#about">About Us</a>
 						</li>
-						<li class="nav-item dropdown">
+						<li class="nav-item text-center dropdown">
 							<a class="nav-link dropdown-toggle" href="#ourProduct" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Products</a>
 							<div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink">
 								<a class="dropdown-item" href="Material.php">Material&nbsp;Handling/Warehouse</a>
 								<a class="dropdown-item" href="TransmissionAxle.php">Transmission/Axle</a>
 							</div>
 						</li>
-						<li class="nav-item">
+						<li class="nav-item text-center">
 							<a class="nav-link" href="#feedback">feedback</a>
 						</li>
-						<li class="nav-item">
+						<li class="nav-item text-center">
 							<a class="nav-link" href="#blog">blog</a>
 						</li>
-						<li class="nav-item">
+						<li class="nav-item text-center">
 							<a class="nav-link" href="#contactus">contact  </a>
 						</li>
 					</ul>

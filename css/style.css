@@ -1758,7 +1758,7 @@ start Responsive style
 	}
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (max-device-width: 768px) and (max-device-width: 1024px) {
 	/* .navbar .navbar-brand{
     position: fixed;
     top: 30px;
@@ -1811,10 +1811,7 @@ start Responsive style
 		height: 120px;
 	}
 	.navbar .navbar-collapse {
-		background: #07f5d0 !important;
-		background: -moz-linear-gradient(left, #07f5d0 0%, #2989d8 48%, #242476 100%) !important;
-		background: -webkit-linear-gradient(left, #07f5d0 0%, #2989d8 48%, #242476 100%) !important;
-		background: linear-gradient(to right, #07f5d0 0%, #2989d8 48%, #242476 100%) !important;
+		background: #07f5d000 !important;
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#07f5d0', endColorstr='#242476', GradientType=1);
 		padding: 10px 0;
 		text-align: center;
@@ -1836,3 +1833,17 @@ start Responsive style
 Close Responsive style
 
 -------------------------------- */
+
+@media only screen and (max-device-width: 1024px) and (min-device-width: 768px){
+	.navbar .navbar-collapse {
+		background: none !important;
+	}
+}
+
+.fa-bars{
+	color: #ffff !important;
+}
+
+.navbar-toggler:not(:disabled):not(.disabled) {
+	border: 1px solid #ffff;
+}
