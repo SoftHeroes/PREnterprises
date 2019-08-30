@@ -1,0 +1,20 @@
+.dropdown:hover>.dropdown-menu {
+	display: block;
+}
+
+.dropdown-menu {
+	background-color: #2989d8;
+}
+
+.dropdown-item:hover {
+	background-color: #216faf;
+}
+
+@media (max-width: 768px) {
+	.dropdown-menu {
+		background-color: inherit;
+	}
+	.dropdown-item:hover {
+		background-color: #00000028;
+	}
+}
