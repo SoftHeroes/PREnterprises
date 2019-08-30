@@ -12,7 +12,7 @@
 	<h3><span style=color: #0000ff;>Thanks</span></h3>";
 	
 	
-	$to ='shubhamjobanputra@gmail.com';
+	$to ='mhe.soluation@gmail.com';
 	$subject = "Inquiry query Arrive";
 	
 	$message = $body;
@@ -27,13 +27,13 @@
 	if(mail($to,$subject,$message,$headers))
 	{
         echo '<script language="javascript">';
-        echo 'alert("message successfully sent")';
+        echo 'alert("Message sent successfully! ✌")';
         echo '</script>';
 	}
 	else
     {
         echo '<script language="javascript">';
-        echo 'alert("message not sent due to technical issues.")' ;
+        echo 'alert("message not sent due to technical issue. 😖")' ;
         echo '</script>';
     }
 	header("Refresh:0; url=index.php");
