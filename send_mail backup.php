@@ -5,9 +5,9 @@
 	<h3><span style=color: #0000ff;>This is&nbsp;<span id=GingerWidget-correction-0 class=correction  alternate>an inquiry Notification</span>&nbsp;from PREnterpriseco.com. </span></h3>
 	<h3><span style=color: #0000ff;>Please, coordinate on bellow following details.</span></h3>
 	<p>&nbsp;</p>
-	<h3 style=padding-left: 30px;><span style=color: #0000ff;>Name<span id=GingerWidget-correction-1 class=correction  alternate>:</span>&nbsp;$name&nbsp;</span></h3>
+	<h3 style=padding-left: 30px;><span style=color: #0000ff;>Name<span id=GingerWidget-correction-1 class=correction  alternate>:</span>&nbsp;$name </span></h3>
 	<h3 style=padding-left: 30px;><span style=color: #0000ff;>Email<span id=GingerWidget-correction-2 class=correction  alternate>:</span>&nbsp;$email&nbsp;</span></h3>
-	<h3 style=padding-left: 30px;><span style=color: #0000ff;><span id=GingerWidget-correction-3 class=correction  alternate>Send</span>&nbsp;Message<span id=GingerWidget-correction-4 class=correction  alternate>:</span>&nbsp;$msg&nbsp;</span></h3>
+	<h3 style=padding-left: 30px;><span style=color: #0000ff;><span id=GingerWidget-correction-3 class=correction  alternate>Send</span>&nbsp;Message<span id=GingerWidget-correction-4 class=correction  alternate>:</span>&nbsp;$msg </span></h3>
 	<h3>&nbsp;</h3>
 	<h3><span style=color: #0000ff;>Thanks</span></h3>";
 	
@@ -15,9 +15,8 @@
 	$to ='shubhamjobanputra@gmail.com';
 	$subject = "Inquiry query Arrive";
 	
-	// from email
 	$message = $body;
-	$headers = "From: sapna@prenterpriseco.com"."\r\n";
+	$headers = "From: support@prenterpriseco.com" ."\r\n";
 	
 	// Always set content-type when sending HTML email
 	$headers = "MIME-Version: 1.0" . "\r\n";
@@ -28,13 +27,13 @@
 	if(mail($to,$subject,$message,$headers))
 	{
         echo '<script language="javascript">';
-        echo 'alert("Message sent successfully! ✌")';
+        echo 'alert("message successfully sent")';
         echo '</script>';
 	}
 	else
     {
         echo '<script language="javascript">';
-        echo 'alert("message not sent due to technical issue. 😖")' ;
+        echo 'alert("message not sent due to technical issues.")' ;
         echo '</script>';
     }
 	header("Refresh:0; url=index.php");
