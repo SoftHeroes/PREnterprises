@@ -1,0 +1,36 @@
+.dropdown:hover>.dropdown-menu {
+	display: block;
+}
+
+.dropdown-menu {
+	background-color: #2989d8;
+}
+
+.dropdown-item:hover {
+	background-color: #216faf;
+}
+
+@media (max-width: 768px) {
+	.dropdown-menu {
+		background-color: inherit;
+	}
+	.dropdown-item:hover {
+		background-color: #00000028;
+	}
+}
+
+
+@media (min-width: 991px) {
+	.navbar-nav {
+		background: #07f5d000 !important;
+	}
+}
+
+@media (max-width: 990px) {
+	.navbar-nav {
+		background: #07f5d0 !important;
+		background: -moz-linear-gradient(left, #07f5d0 0%, #2989d8 48%, #242476 100%) !important;
+		background: -webkit-linear-gradient(left, #07f5d0 0%, #2989d8 48%, #242476 100%) !important;
+		background: linear-gradient(to right, #07f5d0 0%, #2989d8 48%, #242476 100%) !important;
+	}
+}
