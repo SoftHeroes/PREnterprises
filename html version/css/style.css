@@ -3,7 +3,6 @@
  * Author: XeroTheme Teams
  */
 
-
 /* --------------------------------------------------------
 [Table of contents]
 1. Global styles
@@ -25,10 +24,11 @@
 [End table of contents]
 ----------------------------------------------------------------------- */
 
-
 /* ------------------------------
    Global styles
 ---------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 
 html,
 body,
@@ -151,7 +151,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-	content: '';
+	content: "";
 	content: none;
 }
 
@@ -161,7 +161,7 @@ table {
 }
 
 body {
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 26px;
@@ -186,7 +186,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-weight: 400;
 	color: #1e2c34;
 	margin: 0;
@@ -204,13 +204,20 @@ strong {
 	font-weight: 700;
 }
 
-
 /*scroolbar*/
 
 ::-webkit-scrollbar-track {
 	background: #07f5d0;
 	background: -moz-linear-gradient(left, #07f5d0 0%, #860221 50%, #660018 51%, #e1093b 100%);
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%, #07f5d0), color-stop(50%, #860221), color-stop(51%, #660018), color-stop(100%, #e1093b));
+	background: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		color-stop(0%, #07f5d0),
+		color-stop(50%, #860221),
+		color-stop(51%, #660018),
+		color-stop(100%, #e1093b)
+	);
 	background: -webkit-linear-gradient(left, #07f5d0 0%, #860221 50%, #660018 51%, #e1093b 100%);
 	background: -o-linear-gradient(left, #07f5d0 0%, #860221 50%, #660018 51%, #e1093b 100%);
 	background: -ms-linear-gradient(left, #07f5d0 0%, #860221 50%, #660018 51%, #e1093b 100%);
@@ -226,7 +233,15 @@ strong {
 ::-webkit-scrollbar-thumb {
 	background: #07f5d0;
 	background: -moz-linear-gradient(-45deg, #07f5d0 0%, #6e7774 50%, #0a0e0a 51%, #0a0809 100%);
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #07f5d0), color-stop(50%, #6e7774), color-stop(51%, #0a0e0a), color-stop(100%, #0a0809));
+	background: -webkit-gradient(
+		linear,
+		left top,
+		right bottom,
+		color-stop(0%, #07f5d0),
+		color-stop(50%, #6e7774),
+		color-stop(51%, #0a0e0a),
+		color-stop(100%, #0a0809)
+	);
 	background: -webkit-linear-gradient(-45deg, #07f5d0 0%, #6e7774 50%, #0a0e0a 51%, #0a0809 100%);
 	background: -o-linear-gradient(-45deg, #07f5d0 0%, #6e7774 50%, #0a0e0a 51%, #0a0809 100%);
 	background: -ms-linear-gradient(-45deg, #07f5d0 0%, #6e7774 50%, #0a0e0a 51%, #0a0809 100%);
@@ -238,7 +253,6 @@ strong {
 	border-radius: 10px;
 	cursor: pointer;
 }
-
 
 /* This only works with JavaScript, 
         if it's not present, don't show loader */
@@ -263,7 +277,6 @@ strong {
 	z-index: 9999999;
 	background: url(../img/loader_ico.gif) center no-repeat #fff;
 }
-
 
 /* -------------------------------- 
 
@@ -315,19 +328,18 @@ menue style
 .navbar .nav-item a {
 	color: #ffffff;
 	font-size: 14px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-weight: 400;
 	text-transform: capitalize;
 }
 
-.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
-.navbar-light .navbar-nav .show>.nav-link {
+.navbar-light .navbar-nav .show > .nav-link {
 	color: #ffffff;
 	text-decoration: underline;
 }
-
 
 /*.navbar .navbar-brand{
   position: absolute;
@@ -344,13 +356,11 @@ menue style
   max-width: 200px;
 }*/
 
-
 /* -------------------------------- 
 
 close menue style
 
 -------------------------------- */
-
 
 /* -------------------------------- 
 
@@ -386,7 +396,7 @@ canvas {
 }
 
 .top_banner:before {
-	content: '';
+	content: "";
 	width: 100%;
 	height: 100%;
 	background: #07f5d0;
@@ -478,7 +488,7 @@ canvas {
 	-ms-transition: 0.3s all ease;
 	-o-transition: 0.3s all ease;
 	transition: 0.3s all ease;
-	content: '';
+	content: "";
 	background-color: #07f5d0;
 	float: left;
 	z-index: -1;
@@ -488,13 +498,11 @@ canvas {
 	width: 105%;
 }
 
-
 /* -------------------------------- 
 
 Close Banner style
 
 -------------------------------- */
-
 
 /* -------------------------------- 
 
@@ -529,7 +537,7 @@ Start About us style
 }
 
 .title .underline:after {
-	content: '';
+	content: "";
 	width: 4px;
 	height: 5px;
 	position: absolute;
@@ -540,7 +548,7 @@ Start About us style
 }
 
 .title .underline:before {
-	content: '';
+	content: "";
 	width: 4px;
 	height: 5px;
 	position: absolute;
@@ -608,7 +616,7 @@ Start About us style
 	-ms-transition: 0.3s all ease;
 	-o-transition: 0.3s all ease;
 	transition: 0.3s all ease;
-	content: '';
+	content: "";
 	background: #07f5d0;
 	background: -moz-linear-gradient(left, #07f5d0 0%, #2989d8 48%, #242476 100%);
 	background: -webkit-linear-gradient(left, #07f5d0 0%, #2989d8 48%, #242476 100%);
@@ -638,13 +646,11 @@ Start About us style
 	padding-top: 90px;
 }
 
-
 /* -------------------------------- 
 
 Close About us style
 
 -------------------------------- */
-
 
 /* -------------------------------- 
 
@@ -696,7 +702,7 @@ Start Services style
 }
 
 .services .title .underline:before {
-	background-color: #07f5d0
+	background-color: #07f5d0;
 }
 
 .title p {
@@ -728,13 +734,11 @@ Start Services style
 	font-size: 14px;
 }
 
-
 /* -------------------------------- 
 
 Close Services style
 
 -------------------------------- */
-
 
 /* -------------------------------- 
 
@@ -772,7 +776,6 @@ Start Features style
 	transition: 0.3s all ease;
 }
 
-
 /*hover line*/
 
 .single_feature .line1 {
@@ -795,7 +798,7 @@ Start Features style
 }
 
 .single_feature .line1:after {
-	content: '';
+	content: "";
 	width: 50%;
 	height: 1px;
 	background-color: #07f5d0;
@@ -805,7 +808,7 @@ Start Features style
 }
 
 .single_feature .line1:before {
-	content: '';
+	content: "";
 	width: 1px;
 	height: 50%;
 	background-color: #07f5d0;
@@ -834,7 +837,7 @@ Start Features style
 }
 
 .single_feature .line2:after {
-	content: '';
+	content: "";
 	width: 50%;
 	height: 1px;
 	background-color: #07f5d0;
@@ -844,7 +847,7 @@ Start Features style
 }
 
 .single_feature .line2:before {
-	content: '';
+	content: "";
 	width: 1px;
 	height: 50%;
 	background-color: #07f5d0;
@@ -909,13 +912,11 @@ Start Features style
 	display: none;
 }
 
-
 /* -------------------------------- 
 
 Close Features style
 
 -------------------------------- */
-
 
 /* -------------------------------- 
 
@@ -947,7 +948,7 @@ Start Portfolio style
 .portfolio_sec .filter-button-group button {
 	margin: 0;
 	font-weight: 500;
-	color: #07F5D0;
+	color: #07f5d0;
 	font-size: 14px;
 	text-transform: capitalize;
 	padding: 16px;
@@ -958,7 +959,7 @@ Start Portfolio style
 }
 
 .portfolio_sec .filter-button-group button.is-checked {
-	background-color: #07F5D0;
+	background-color: #07f5d0;
 	color: #242047;
 }
 
@@ -974,13 +975,11 @@ Start Portfolio style
 	top: 50px !important;
 }
 
-
 /* -------------------------------- 
 
 Close Portfolio style
 
 -------------------------------- */
-
 
 /* -------------------------------- 
 
@@ -1002,7 +1001,7 @@ Start Fun fact style
 }
 
 .fun_fact:before {
-	content: '';
+	content: "";
 	width: 100%;
 	height: 100%;
 	background: #07f5d0;
@@ -1032,13 +1031,11 @@ Start Fun fact style
 	line-height: 1.3em;
 }
 
-
 /* -------------------------------- 
 
 Close Fun fact style
 
 -------------------------------- */
-
 
 /* -------------------------------- 
 
@@ -1106,13 +1103,11 @@ Start Our Team style
 	line-height: 1.7em;
 }
 
-
 /* -------------------------------- 
 
 Close Our Team style
 
 -------------------------------- */
-
 
 /* -------------------------------- 
 
@@ -1123,7 +1118,7 @@ Start price table style
 .package_table {
 	width: 100%;
 	padding: 120px 0;
-	background-color: #F6F6F6;
+	background-color: #f6f6f6;
 }
 
 .package_table .title p {
@@ -1148,7 +1143,7 @@ Start price table style
 }
 
 .package_table .swiper-slide-active .table_single {
-	opacity: 1.0;
+	opacity: 1;
 }
 
 .table_head {
@@ -1175,7 +1170,7 @@ Start price table style
 }
 
 .table_single:after {
-	content: '';
+	content: "";
 	height: 160px;
 	width: 100%;
 	position: absolute;
@@ -1214,13 +1209,11 @@ Start price table style
 	margin-top: 12px;
 }
 
-
 /* -------------------------------- 
 
 Close price table style
 
 -------------------------------- */
-
 
 /* -------------------------------- 
 
@@ -1242,7 +1235,7 @@ Start Feedback style
 }
 
 .Client_testimonials:before {
-	content: '';
+	content: "";
 	width: 100%;
 	height: 100%;
 	background: #07f5d0;
@@ -1311,13 +1304,11 @@ Start Feedback style
 	height: 12px;
 }
 
-
 /* -------------------------------- 
 
 Close Feedback style
 
 -------------------------------- */
-
 
 /* -------------------------------- 
 
@@ -1327,7 +1318,7 @@ Start Blog style
 
 .r_blog {
 	width: 100%;
-	background-color: #F6F6F6;
+	background-color: #f6f6f6;
 	padding: 120px 0;
 }
 
@@ -1405,7 +1396,7 @@ Start Blog style
 }
 
 .r_blog .card-body .btn:after {
-	content: '';
+	content: "";
 	width: 0;
 	height: 100%;
 	position: absolute;
@@ -1428,13 +1419,11 @@ Start Blog style
 	color: #242047;
 }
 
-
 /* -------------------------------- 
 
 Close Blog style
 
 -------------------------------- */
-
 
 /* -------------------------------- 
 
@@ -1561,13 +1550,11 @@ Start Contact style
 	bottom: 1.2rem;
 }
 
-
 /* -------------------------------- 
 
 Close Contact style
 
 -------------------------------- */
-
 
 /* -------------------------------- 
 
@@ -1618,13 +1605,11 @@ Start Footer style
 	padding-top: 6px;
 }
 
-
 /* -------------------------------- 
 
 Close Footer style
 
 -------------------------------- */
-
 
 /*scrool*/
 
@@ -1639,14 +1624,13 @@ Close Footer style
 	color: #242047;
 }
 
-
 /* -------------------------------- 
 
 start Responsive style
 
 -------------------------------- */
 
-@media only screen and (max-width :380px) {
+@media only screen and (max-width: 380px) {
 	.contact_right_single {
 		height: 140px;
 	}
@@ -1827,23 +1811,34 @@ start Responsive style
 	}
 }
 
-
 /* -------------------------------- 
 
 Close Responsive style
 
 -------------------------------- */
 
-@media only screen and (max-device-width: 1024px) and (min-device-width: 768px){
+@media only screen and (max-device-width: 1024px) and (min-device-width: 768px) {
 	.navbar .navbar-collapse {
 		background: none !important;
 	}
 }
 
-.fa-bars{
+.fa-bars {
 	color: #ffff !important;
 }
 
 .navbar-toggler:not(:disabled):not(.disabled) {
 	border: 1px solid #ffff;
+}
+
+.logo-default {
+	width: 2rem;
+	position: relative;
+	bottom: 0.15rem;
+}
+.titleLogo {
+	font-family: "Staatliches", cursive;
+	font-size: 2rem;
+	color: #9F2A2C;
+	/* border: 1px solid black ; */
 }
