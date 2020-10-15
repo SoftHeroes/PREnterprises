@@ -1832,9 +1832,9 @@ Close Responsive style
 }
 
 .logo-default {
-	width: 2rem;
+	width: 2.75rem;
 	position: relative;
-	bottom: 0.15rem;
+	bottom: 0.5rem;
 }
 .titleLogo {
 	font-family: "Staatliches", cursive;
