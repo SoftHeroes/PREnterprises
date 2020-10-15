@@ -1832,13 +1832,17 @@ Close Responsive style
 }
 
 .logo-default {
-	width: 2.75rem;
-	position: relative;
-	bottom: 0.5rem;
+	width: 40%;
+	/* position: relative;
+	bottom: 0.5rem; */
 }
 .titleLogo {
 	font-family: "Staatliches", cursive;
 	font-size: 2rem;
 	color: #9F2A2C;
 	/* border: 1px solid black ; */
+}
+
+.imgBorder{
+	border: 4px #FEAEC9 solid;
 }
