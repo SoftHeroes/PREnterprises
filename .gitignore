@@ -26,3 +26,4 @@ hive-mind-prompt-*.txt
 .claude
 .claude-flow
 memory
+.DS_Store

@@ -1846,3 +1846,180 @@ Close Responsive style
 .imgBorder{
 	border: 4px #FEAEC9 solid;
 }
+
+/* Valued Partners Section Styles */
+.valued_partners {
+    background: #f8f9fa;
+    padding: 80px 0;
+}
+
+.valued_partners .title h3 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.valued_partners .partner_single {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.valued_partners .partner_single:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.valued_partners .partner_single img {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.valued_partners .partner_single:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Why Choose Us Section Styles */
+.why_choose_us {
+    background: #fff;
+    padding: 80px 0;
+}
+
+.why_choose_us .title h3 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.why_choose_card {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.why_choose_single {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.why_choose_single:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.why_choose_single h4 {
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.why_choose_single p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.stats_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.stat_item {
+    text-align: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.stat_item h5 {
+    color: #e74c3c;
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.stat_item p {
+    color: #666;
+    font-size: 12px;
+    margin: 0;
+}
+
+.why_choose_cta {
+    background: #2c3e50;
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.why_choose_cta p {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.why_choose_cta .btn {
+    background: #e74c3c;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.why_choose_cta .btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design for New Sections */
+@media (max-width: 768px) {
+    .valued_partners .partner_single {
+        height: 150px;
+        margin-bottom: 20px;
+    }
+    
+    .valued_partners .partner_single img {
+        max-height: 80px;
+    }
+    
+    .stats_grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .why_choose_card {
+        padding: 20px;
+    }
+    
+    .why_choose_single {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .why_choose_cta {
+        padding: 20px;
+    }
+    
+    .why_choose_cta p {
+        font-size: 14px;
+    }
+}
