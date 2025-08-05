@@ -98,22 +98,42 @@ $(function ($) {
 	owls.owlCarousel({
 
 		autoplay: true,
-		autoplayTimeout: 5000,
-		autoplayHoverPause: true,
-		items: 1,
+		autoplayTimeout: 0,
+		autoplaySpeed: 2000,
+		autoplayHoverPause: false,
+		items: 8,
 		loop: true,
 		center: false,
-		margin: 40,
+		margin: 15,
 		stagePadding: 0,
-		dots: true,
+		dots: false,
 		nav: false,
+		slideTransition: 'linear',
+		smartSpeed: 2000,
+		fluidSpeed: true,
 
-
-		merge: false,
-		mergeFit: true,
-		autoWidth: false,
-		animateOut: 'fadeOutDown',
-		animateIn: 'fadeInDown',
+		responsive: {
+			0: {
+				items: 3,
+				margin: 10
+			},
+			576: {
+				items: 4,
+				margin: 10
+			},
+			768: {
+				items: 5,
+				margin: 12
+			},
+			992: {
+				items: 6,
+				margin: 15
+			},
+			1200: {
+				items: 8,
+				margin: 15
+			}
+		}
 
 	});
 
