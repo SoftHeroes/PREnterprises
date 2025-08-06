@@ -208,7 +208,7 @@
 	</nav>
 	<!-- /.navbar -->
 	<!--BANNER-->
-	<header class="transmission-hero" style="background: linear-gradient(135deg, rgba(139, 36, 40, 0.9), rgba(189, 49, 54, 0.8)), url('img/back1.jpg'); background-size: cover; background-position: center; min-height: 60vh; display: flex; align-items: center;">
+	<header class="transmission-hero" style="background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(26, 26, 26, 0.9)), url('img/back1.jpg'); background-size: cover; background-position: center; min-height: 60vh; display: flex; align-items: center;">
 		<div id="particles-js"></div>
 		<div class="container">
 			<div class="row h-100">
@@ -488,162 +488,321 @@
 			</div>
 		</div>
 	</section>
-	<!--CONTACT-->
-	<section class="contacts" id="contactus" style="padding: 80px 0; background: linear-gradient(135deg, var(--dark-red, #8B2428), var(--primary-red, #BD3136));">
+
+    <!--CONTACT-->
+    <section class="contacts" id="contactus">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-8 offset-md-2 text-center">
-					<div class="title">
-						<h2 style="color: #fff; font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Get In Touch</h2>
-						<p style="color: var(--light-blue, #F5E6E7); font-size: 1.1rem; margin-bottom: 3rem;">Ready to discuss your industrial equipment needs? Contact us today.</p>
-						<div class="underline" style="background: #fff; width: 80px; height: 4px; margin: 0 auto 3rem;"></div>
-					</div>
+		  <div class="row">
+			<div class="w-100"></div>
+			<div class="col-md-12">
+			  <div
+				class="contact-form-container"
+				style="
+				  max-width: 1000px;
+				  margin: 0 auto;
+				  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+				  border-radius: 20px;
+				  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+				  overflow: hidden;
+				  border: 1px solid #e9ecef;
+				"
+			  >
+				<!-- Form Header -->
+				<div class="form-header" style="background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%); padding: 30px 40px; text-align: center">
+				  <h3 style="color: #fff; font-size: 1.8rem; font-weight: 700; margin: 0; text-transform: uppercase; letter-spacing: 2px">
+					<i class="fas fa-envelope" style="margin-right: 10px"></i>
+					Get A Quote Today
+				  </h3>
+				  <p style="color: rgba(255, 255, 255, 0.9); margin: 10px 0 0 0; font-size: 1rem">Fill out the form below and we'll get back to you within 24 hours</p>
 				</div>
-				<div class="w-100"></div>
-				<div class="col-md-12">
+  
+				<!-- Contact Form -->
+				<div class="form-body" style="padding: 40px">
+				  <form class="contact-form">
+					<style>
+					  .contact-form {
+						position: relative;
+					  }
+  
+					  .form-group-enhanced {
+						position: relative;
+						margin-bottom: 25px;
+					  }
+  
+					  .form-group-enhanced .form-icon {
+						position: absolute;
+						left: 15px;
+						top: 50%;
+						transform: translateY(-50%);
+						color: var(--primary-red);
+						font-size: 18px;
+						z-index: 2;
+					  }
+  
+					  .form-group-enhanced.textarea-group .form-icon {
+						top: 20px;
+						transform: none;
+					  }
+  
+					  .contact-form .form-control {
+						padding: 18px 15px 18px 50px;
+						border: 2px solid #e9ecef;
+						border-radius: 12px;
+						font-size: 16px;
+						font-weight: 500;
+						background: #fff;
+						transition: all 0.3s ease;
+						box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+						font-family: "Montserrat", sans-serif;
+					  }
+  
+					  .contact-form textarea.form-control {
+						height: 100px;
+						resize: none;
+						padding-top: 18px;
+					  }
+  
+					  .contact-form .form-control:focus {
+						border-color: var(--primary-red);
+						box-shadow: 0 0 0 3px rgba(189, 49, 54, 0.1);
+						outline: none;
+						background: #fff;
+					  }
+  
+					  .contact-form .form-control::placeholder {
+						color: #6c757d;
+						font-weight: 400;
+					  }
+  
+					  .contact-form .btn-primary-custom {
+						background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
+						border: none;
+						color: #fff;
+						padding: 18px 35px;
+						font-size: 16px;
+						font-weight: 700;
+						border-radius: 12px;
+						transition: all 0.3s ease;
+						text-transform: uppercase;
+						letter-spacing: 1.5px;
+						position: relative;
+						overflow: hidden;
+						box-shadow: 0 8px 25px rgba(189, 49, 54, 0.3);
+					  }
+  
+					  .contact-form .btn-primary-custom:hover {
+						transform: translateY(-3px);
+						box-shadow: 0 12px 35px rgba(189, 49, 54, 0.4);
+					  }
+  
+					  .contact-form .btn-primary-custom:active {
+						transform: translateY(-1px);
+					  }
+  
+					  .contact-form .btn-primary-custom::before {
+						content: "";
+						position: absolute;
+						top: 0;
+						left: -100%;
+						width: 100%;
+						height: 100%;
+						background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+						transition: left 0.5s;
+					  }
+  
+					  .contact-form .btn-primary-custom:hover::before {
+						left: 100%;
+					  }
+  
+					  @media (max-width: 768px) {
+						.form-body {
+						  padding: 30px 20px !important;
+						}
+						.form-header {
+						  padding: 25px 20px !important;
+						}
+						.contact-form .form-control {
+						  margin-bottom: 20px;
+						}
+					  }
+					</style>
+  
 					<div class="row">
-						<div class="col-md-6">
-							<div class="contact_form" style="background: rgba(255,255,255,0.95); padding: 40px; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); backdrop-filter: blur(10px);">
-								<div>
-									<div class="floating-label-group" style="position: relative; margin-bottom: 2rem;">
-										<input type="text" id="name" name="name" required style="width: 100%; padding: 1rem; border: 2px solid var(--gray-300, #DADADA); border-radius: 8px; font-size: 1rem; background: transparent; transition: all 0.3s ease;" />
-										<label for="name" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--gray-500, #7A7A7A); font-size: 1rem; pointer-events: none; transition: all 0.3s ease; background: #fff; padding: 0 0.5rem;">Your Name</label>
-									</div>
-									<div class="floating-label-group" style="position: relative; margin-bottom: 2rem;">
-										<input type="email" id="email" name="email" required style="width: 100%; padding: 1rem; border: 2px solid var(--gray-300, #DADADA); border-radius: 8px; font-size: 1rem; background: transparent; transition: all 0.3s ease;" />
-										<label for="email" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--gray-500, #7A7A7A); font-size: 1rem; pointer-events: none; transition: all 0.3s ease; background: #fff; padding: 0 0.5rem;">Email Address</label>
-									</div>
-									<div class="floating-label-group" style="position: relative; margin-bottom: 2rem;">
-										<textarea id="msg" name="msg" required rows="4" style="width: 100%; padding: 1rem; border: 2px solid var(--gray-300, #DADADA); border-radius: 8px; font-size: 1rem; background: transparent; transition: all 0.3s ease; resize: vertical; min-height: 120px;"></textarea>
-										<label for="msg" style="position: absolute; left: 1rem; top: 1rem; color: var(--gray-500, #7A7A7A); font-size: 1rem; pointer-events: none; transition: all 0.3s ease; background: #fff; padding: 0 0.5rem;">Your Message</label>
-									</div>
-									<button type="button" onclick="connectFormSubmit()" style="background: linear-gradient(135deg, var(--primary-red, #BD3136), var(--dark-red, #8B2428)); color: #fff; border: none; padding: 1rem 2.5rem; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px; width: 100%;">Send Message</button>
-								</div>
-							</div>
+					  <div class="col-sm-6">
+						<div class="form-group-enhanced">
+						  <i class="fas fa-user form-icon"></i>
+						  <input type="text" id="name" name="name" class="form-control" placeholder="Your Full Name" required />
 						</div>
-						<div class="col-md-5 offset-md-1">
-							<div class="contact-info" style="background: rgba(255,255,255,0.95); padding: 40px; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); backdrop-filter: blur(10px); height: 100%;">
-								<div class="contact_right_single" style="display: flex; align-items: center; margin-bottom: 2rem; padding: 1rem; background: var(--light-blue, #F5E6E7); border-radius: 10px;">
-									<div class="contact-icon" style="background: var(--primary-red, #BD3136); padding: 1rem; border-radius: 50%; margin-right: 1rem; min-width: 60px; display: flex; align-items: center; justify-content: center;">
-										<img src="img/icon/contact1.png" alt="Phone" style="width: 24px; height: 24px; filter: brightness(0) invert(1);" />
-									</div>
-									<div>
-										<h4 style="color: var(--gray-900, #1A1A1A); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Phone Numbers</h4>
-										<p style="color: var(--gray-700, #4A4A4A); margin: 0; font-size: 0.95rem;">+91 124-7174320<br>+91 7302627560</p>
-									</div>
-								</div>
-								
-								<div class="contact_right_single" style="display: flex; align-items: center; margin-bottom: 2rem; padding: 1rem; background: var(--light-blue, #F5E6E7); border-radius: 10px;">
-									<div class="contact-icon" style="background: var(--primary-red, #BD3136); padding: 1rem; border-radius: 50%; margin-right: 1rem; min-width: 60px; display: flex; align-items: center; justify-content: center;">
-										<img src="img/icon/contact2.png" alt="Email" style="width: 24px; height: 24px; filter: brightness(0) invert(1);" />
-									</div>
-									<div>
-										<h4 style="color: var(--gray-900, #1A1A1A); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Email Address</h4>
-										<p style="color: var(--gray-700, #4A4A4A); margin: 0; font-size: 0.95rem;">info@prenterpriseco.com</p>
-									</div>
-								</div>
-								
-								<div class="contact_right_single" style="padding: 1rem; background: var(--light-blue, #F5E6E7); border-radius: 10px;">
-									<div style="display: flex; align-items: flex-start;">
-										<div class="contact-icon" style="background: var(--primary-red, #BD3136); padding: 1rem; border-radius: 50%; margin-right: 1rem; min-width: 60px; display: flex; align-items: center; justify-content: center;">
-											<img src="img/icon/contact3.png" alt="Address" style="width: 24px; height: 24px; filter: brightness(0) invert(1);" />
-										</div>
-										<div>
-											<div class="address-section" style="margin-bottom: 1.5rem;">
-												<h4 style="color: var(--gray-900, #1A1A1A); font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">HO Office:</h4>
-												<p style="color: var(--gray-700, #4A4A4A); margin: 0; font-size: 0.9rem; line-height: 1.4;">Office Unit 642 Satya The Hive Sector 102<br>Dwarka Express Way Gurugram - 122505 (Haryana)<br><strong>GSTIN:</strong> 06BKZPP1525R1Z6</p>
-											</div>
-											<div class="address-section">
-												<h4 style="color: var(--gray-900, #1A1A1A); font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">Bhopal Office:</h4>
-												<p style="color: var(--gray-700, #4A4A4A); margin: 0; font-size: 0.9rem; line-height: 1.4;">Office Unit E-417, Sagar Q Eden Garden Phase<br>Opposite Aryan Banglow, Hoshangabad Road<br>Bhopal - 462026<br><strong>GSTIN:</strong> 23BKZPP1525R1ZA</p>
-											</div>
-											<div class="tagline" style="background: var(--primary-red, #BD3136); color: #fff; padding: 1rem; border-radius: 8px; text-align: center; margin-top: 1.5rem;">
-												<p style="margin: 0; font-weight: 600; font-size: 1rem;">"MAKE ONE CALL - WE STOCK IT ALL!"</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+					  </div>
+					  <div class="col-sm-6">
+						<div class="form-group-enhanced">
+						  <i class="fas fa-envelope form-icon"></i>
+						  <input type="email" id="email" name="email" class="form-control" placeholder="Email Address" required />
 						</div>
+					  </div>
 					</div>
+					<div class="row">
+					  <div class="col-sm-6">
+						<div class="form-group-enhanced">
+						  <i class="fas fa-phone form-icon"></i>
+						  <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone Number" />
+						</div>
+					  </div>
+					  <div class="col-sm-6">
+						<div class="form-group-enhanced">
+						  <i class="fas fa-building form-icon"></i>
+						  <input type="text" id="company" name="company" class="form-control" placeholder="Company Name" />
+						</div>
+					  </div>
+					</div>
+					<div class="row">
+					  <div class="col-sm-12">
+						<div class="form-group-enhanced textarea-group">
+						  <i class="fas fa-comment-dots form-icon"></i>
+						  <textarea id="msg" name="msg" class="form-control" placeholder="Tell us about your requirements..." rows="1" required></textarea>
+						</div>
+					  </div>
+					</div>
+					<div class="row">
+					  <div class="col-sm-12">
+						<button type="button" class="btn btn-primary-custom btn-block" onclick="connectFormSubmit()">
+						  <i class="fas fa-paper-plane" style="margin-right: 8px"></i>
+						  Send Message
+						</button>
+					  </div>
+					</div>
+				  </form>
 				</div>
+			  </div>
 			</div>
+		  </div>
 		</div>
 		<!--/.container-->
-	</section>
-	<!--/CONTACT-->
+	  </section>
+	  <!--/CONTACT-->
+
 	<!--FOOTER-->
-	<footer class="footers" style="background: var(--gray-900, #1A1A1A); padding: 60px 0 30px; color: #fff;">
+	<footer class="modern-footer">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-md-6 mb-4">
-					<div class="footer-section">
-						<img src="img/logo full.png" alt="PR Enterprises Logo" style="max-height: 60px; margin-bottom: 1rem; filter: brightness(0) invert(1);">
-						<p style="color: var(--gray-300, #DADADA); line-height: 1.6; margin-bottom: 1.5rem;">Leading supplier of industrial equipment, transmission systems, and hydraulic solutions for modern manufacturing.</p>
-						<div class="footer_social">
-							<ul style="list-style: none; padding: 0; display: flex; gap: 1rem;">
-								<li><a href="#" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: var(--primary-red, #BD3136); border-radius: 50%; color: #fff; transition: all 0.3s ease;"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: var(--primary-red, #BD3136); border-radius: 50%; color: #fff; transition: all 0.3s ease;"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: var(--primary-red, #BD3136); border-radius: 50%; color: #fff; transition: all 0.3s ease;"><i class="fab fa-linkedin-in"></i></a></li>
-								<li><a href="#" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: var(--primary-red, #BD3136); border-radius: 50%; color: #fff; transition: all 0.3s ease;"><i class="fab fa-instagram"></i></a></li>
-							</ul>
-						</div>
-					</div>
+		  <div class="row">
+			<!-- Column 1: Company Info -->
+			<div class="col-lg-3 col-md-6 mb-4">
+			  <div class="footer-column">
+				<img src="img/logo full.png" alt="PR Enterprises Logo" class="footer-logo mb-3" style="max-width: 150px" />
+				<p class="footer-description">Leading provider of genuine Dana Off-Highway, HydraForce & Dantal Hydraulics spare parts with excellence in industrial equipment solutions.</p>
+				<div class="certifications mt-3">
+				  <h6 class="footer-subtitle">Certifications</h6>
+				  <p class="certification-text">Authorized Dealer<br />ISO Compliant Warehouse<br />72-Hour Dispatch Guarantee</p>
 				</div>
-				<div class="col-lg-3 col-md-6 mb-4">
-					<div class="footer-section">
-						<h4 style="color: #fff; font-size: 1.3rem; font-weight: 600; margin-bottom: 1.5rem; position: relative;">Quick Links</h4>
-						<ul style="list-style: none; padding: 0;">
-							<li style="margin-bottom: 0.8rem;"><a href="index.html#home" style="color: var(--gray-300, #DADADA); text-decoration: none; transition: color 0.3s ease;">Home</a></li>
-							<li style="margin-bottom: 0.8rem;"><a href="index.html#about" style="color: var(--gray-300, #DADADA); text-decoration: none; transition: color 0.3s ease;">About Us</a></li>
-							<li style="margin-bottom: 0.8rem;"><a href="index.html#ourProduct" style="color: var(--gray-300, #DADADA); text-decoration: none; transition: color 0.3s ease;">Our Products</a></li>
-							<li style="margin-bottom: 0.8rem;"><a href="index.html#feedback" style="color: var(--gray-300, #DADADA); text-decoration: none; transition: color 0.3s ease;">Clients</a></li>
-							<li style="margin-bottom: 0.8rem;"><a href="#contactus" style="color: var(--gray-300, #DADADA); text-decoration: none; transition: color 0.3s ease;">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 mb-4">
-					<div class="footer-section">
-						<h4 style="color: #fff; font-size: 1.3rem; font-weight: 600; margin-bottom: 1.5rem;">Our Products</h4>
-						<ul style="list-style: none; padding: 0;">
-							<li style="margin-bottom: 0.8rem;"><a href="TransmissionAxle.html" style="color: var(--gray-300, #DADADA); text-decoration: none; transition: color 0.3s ease;">Dana Transmission & Axles</a></li>
-							<li style="margin-bottom: 0.8rem;"><a href="#hydraulics-section" style="color: var(--gray-300, #DADADA); text-decoration: none; transition: color 0.3s ease;">Hydraulic Systems</a></li>
-							<li style="margin-bottom: 0.8rem;"><a href="#dana-series" style="color: var(--gray-300, #DADADA); text-decoration: none; transition: color 0.3s ease;">Genuine Spare Parts</a></li>
-							<li style="margin-bottom: 0.8rem;"><a href="index.html#ourProduct" style="color: var(--gray-300, #DADADA); text-decoration: none; transition: color 0.3s ease;">Industrial Equipment</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 mb-4">
-					<div class="footer-section">
-						<h4 style="color: #fff; font-size: 1.3rem; font-weight: 600; margin-bottom: 1.5rem;">Contact Info</h4>
-						<div class="contact-item" style="display: flex; align-items: center; margin-bottom: 1rem;">
-							<i class="fas fa-phone" style="color: var(--primary-red, #BD3136); margin-right: 0.8rem; font-size: 1.1rem;"></i>
-							<span style="color: var(--gray-300, #DADADA);">+91 124-7174320</span>
-						</div>
-						<div class="contact-item" style="display: flex; align-items: center; margin-bottom: 1rem;">
-							<i class="fas fa-envelope" style="color: var(--primary-red, #BD3136); margin-right: 0.8rem; font-size: 1.1rem;"></i>
-							<span style="color: var(--gray-300, #DADADA);">info@prenterpriseco.com</span>
-						</div>
-						<div class="contact-item" style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
-							<i class="fas fa-map-marker-alt" style="color: var(--primary-red, #BD3136); margin-right: 0.8rem; font-size: 1.1rem; margin-top: 0.2rem;"></i>
-							<span style="color: var(--gray-300, #DADADA); line-height: 1.4;">Office Unit 642, Satya The Hive<br>Sector 102, Gurugram - 122505</span>
-						</div>
-					</div>
+			  </div>
+			  <!-- Social Links (Compact) -->
+			  <div class="social-links" style="margin-top: 24px; margin-left: 12px">
+				  <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+				  <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+				  <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+				  <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
 				</div>
 			</div>
-			<hr style="border-color: var(--gray-700, #4A4A4A); margin: 2rem 0 1rem;">
-			<div class="row align-items-center">
-				<div class="col-md-6">
-					<div class="copy_right">
-						<p style="color: var(--gray-300, #DADADA); margin: 0;">&copy; 2024 PR Enterprises. All rights reserved.</p>
-					</div>
-				</div>
-				<div class="col-md-6 text-right">
-					<p style="color: var(--gray-300, #DADADA); margin: 0; font-size: 0.9rem;">"Make One Call - We Stock It All!"</p>
-				</div>
+			
+  
+			<!-- Column 2: Quick Links -->
+			<div class="col-lg-3 col-md-6 mb-4">
+			  <div class="footer-column">
+				<h5 class="footer-title">Quick Links</h5>
+				<ul class="footer-links">
+				  <li><a href="#home">Home</a></li>
+				  <li><a href="#about">About Us</a></li>
+				  <li><a href="#ourProduct">Our Products</a></li>
+				  <li><a href="#why-choose-us">Why Choose Us</a></li>
+				  <li><a href="#feedback">Our Clients</a></li>
+				  <li><a href="#contactus">Contact</a></li>
+				</ul>
+			  </div>
 			</div>
+  
+			<!-- Column 3: Products -->
+			<div class="col-lg-3 col-md-6 mb-4">
+			  <div class="footer-column">
+				<h5 class="footer-title">Our Products</h5>
+				<ul class="footer-links">
+				  <li><a href="#ourProduct">Dana Axles & Transmission</a></li>
+				  <li><a href="#ourProduct">Hydraulic Cylinders</a></li>
+				  <li><a href="#ourProduct">Dock Levelers</a></li>
+				  <li><a href="#ourProduct">Hand Pallet Trucks</a></li>
+				  <li><a href="#ourProduct">Lift Tables</a></li>
+				  <li><a href="#ourProduct">Spare Parts</a></li>
+				</ul>
+			  </div>
+			</div>
+  
+			<!-- Column 4: Contact Information (Optimized) -->
+			<div class="col-lg-3 col-md-6 mb-4">
+			  <div class="footer-column">
+				<h5 class="footer-title">Contact Information</h5>
+  
+				<!-- Phone Numbers (Compact) -->
+				<div class="contact-section mb-2">
+				  <h6 style="color: var(--primary-red); font-weight: 600; margin-bottom: 8px; font-size: 0.9rem">
+					<i class="fas fa-phone" style="margin-right: 8px"></i>Phone Numbers
+				  </h6>
+				  <div style="margin-left: 16px; line-height: 1.3">
+					<span style="font-size: 12px; color: #666; display: block; margin-bottom: 2px">+91 124 7111744 | +91 124 7174320</span>
+					<span style="font-size: 12px; color: #666; display: block; margin-bottom: 2px">+91 7302627560 | +91 7838646074</span>
+				  </div>
+				</div>
+  
+				<!-- Email (Compact)-->
+				<div class="contact-section mb-2">
+				  <h6 style="color: var(--primary-red); font-weight: 600; margin-bottom: 8px; font-size: 0.9rem">
+					<i class="fas fa-envelope" style="margin-right: 8px"></i>Email
+				  </h6>
+				  <div style="margin-left: 16px">
+					<a href="mailto:info@prenterpriseco.com" style="font-size: 13px; color: var(--primary-red); text-decoration: none">
+					  info@prenterpriseco.com
+					</a>
+				  </div>
+				</div>
+  
+				<!-- Offices (Compact) -->
+				<div class="contact-section mb-2">
+				  <h6 style="color: var(--primary-red); font-weight: 600; margin-bottom: 8px; font-size: 0.9rem">
+					<i class="fas fa-building" style="margin-right: 8px"></i>Our Offices
+				  </h6>
+				  <div style="margin-left: 16px; font-size: 12px; color: #666; line-height: 1.3">
+					<div style="margin-bottom: 8px">
+					  <strong style="color: #333; font-size: 12px">HO Office - Gurugram</strong><br>
+					  Unit 642 Satya The Hive Sector 102<br>
+					  Gurugram - 122505 (Haryana)<br>
+					  <small style="color: var(--primary-red)">GSTIN: 06BKZPP1525R1Z6</small>
+					</div>
+					<div style="margin-bottom: 8px">
+					  <strong style="color: #333; font-size: 12px">Bhopal Office</strong><br>
+					  Unit E-417, Sagar Q Eden Garden<br>
+					  Bhopal - 462026<br>
+					  <small style="color: var(--primary-red)">GSTIN: 23BKZPP1525R1ZA</small>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+  
+		  <!-- Footer Bottom -->
+		  <hr class="footer-divider" />
+		  <div class="row">
+			<div class="col-md-8">
+			  <div class="copyright">
+				<p>© 2024 PR Enterprises. All rights reserved. | <strong>"MAKE ONE CALL - WE STOCK IT ALL!"</strong></p>
+			  </div>
+			</div>
+			<div class="col-md-4">
+			  <div class="footer-tagline">
+				<p class="mb-0">Trusted Partner in Industrial Solutions</p>
+			  </div>
+			</div>
+		  </div>
 		</div>
-	</footer>
+	  </footer>
 	<a href="#" class="scrollup"><i class="fas fa-arrow-up fa-2x"></i></a>
 	<script src="js/jquery-1.12.4.min.js"></script>
 	<script src="js/vendor/bootstrap.min.js"></script>

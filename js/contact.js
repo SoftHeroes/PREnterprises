@@ -3,6 +3,8 @@ function connectFormSubmit() {
     var name = $('#name').val();
     var msg = $('#msg').val();
     var email = $('#email').val();
+    var phone = $('#phone').val();
+    var company = $('#company').val();
 
     if (name.trim() == '') {
         alert('Please enter your name.👻');
@@ -45,7 +47,9 @@ function connectFormSubmit() {
         template_params: {
             'email': $('#email').val(),
             'name': $('#name').val(),
-            'msg': $('#msg').val()
+            'msg': $('#msg').val(),
+            'phone': $('#phone').val(),
+            'company': $('#company').val()
         }
     };
 
