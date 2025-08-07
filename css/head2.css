@@ -1,57 +1,68 @@
+/* CSS Variables for consistency */
+:root {
+	--primary-red: #BD3136;
+	--dark-red: #8B2428;
+	--light-red: #F5E6E7;
+	--gray-900: #1A1A1A;
+	--gray-700: #4A4A4A;
+	--gray-500: #7A7A7A;
+	--gray-300: #DADADA;
+	--gray-100: #F5F5F5;
+}
+
 .dropdown:hover>.dropdown-menu {
 	display: block;
 }
 
 .dropdown-menu {
-	background-color: #0e3c70;
+	background-color: var(--primary-red, #BD3136);
+	border-radius: 8px;
+	box-shadow: 0 4px 15px rgba(189, 49, 54, 0.2);
+	border: none;
 }
 
 .dropdown-item:hover {
-	background-color: #092c54;
+	background-color: var(--dark-red, #8B2428);
+	color: #ffffff;
 }
 
 @media (max-width: 768px) {
 	.dropdown-menu {
-		background-color: inherit;
+		background-color: var(--primary-red, #BD3136);
+		border-radius: 8px;
+		box-shadow: 0 4px 15px rgba(189, 49, 54, 0.2);
 	}
 	.dropdown-item:hover {
-		background-color: #00000028;
+		background-color: var(--dark-red, #8B2428);
+		color: #ffffff;
 	}
 }
 
 
 .active_sc {
-	background: #092c54 !important;
+	background: rgba(26, 26, 26, 0.95) !important;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border-bottom: 2px solid var(--primary-red);
 }
 
 .navbar {
 	background: none;
 }
 
-.navbar .navbar-collapse {
-	background: none !important;
-}
+/* Navbar collapse background is handled in style.css for all viewports */
 
 @media only screen and (max-device-width: 1024px) and (min-device-width: 768px){
-	.navbar .navbar-collapse {
-		background: none !important;
-	}
+	/* Tablet view navbar collapse background is handled in style.css */
 }
 @media only screen and (max-device-width: 768px){
-	.navbar {
-		background: #092c54 !important;
-	}
-}
-
-.navbar .navbar-collapse {
-	background: #092c54 !important;
+	/* Mobile navbar and dropdown menu backgrounds are handled in style.css */
+	/* Removed background overrides to allow dark theme from style.css */
 }
 .navbar .nav-item a {
 	align-items: center;
 }
 
 @media (min-width: 991px) {
-	.navbar .navbar-collapse {
-		background: #07f5d000 !important;
-	}
+	/* Desktop navbar background handled in style.css */
 }
