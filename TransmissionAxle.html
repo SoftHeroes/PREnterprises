@@ -154,6 +154,64 @@
 		  }
 		}
 
+		/* Dropdown Menu Theme Styling */
+		.dropdown-menu {
+		  background: #fff;
+		  border: 1px solid var(--gray-300, #DADADA);
+		  border-radius: 8px;
+		  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+		  padding: 0.5rem 0;
+		  margin-top: 0.5rem;
+		  font-family: 'Montserrat', sans-serif;
+		  min-width: 200px;
+		}
+
+		.dropdown-item {
+		  color: var(--gray-700, #4A4A4A);
+		  padding: 0.75rem 1.5rem;
+		  font-size: 0.95rem;
+		  font-weight: 500;
+		  transition: all 0.3s ease;
+		  border: none;
+		  display: block;
+		  width: 100%;
+		  text-align: left;
+		  background: transparent;
+		  text-decoration: none;
+		}
+
+		.dropdown-item:hover {
+		  background: var(--primary-red, #BD3136) !important;
+		  color: #fff !important;
+		  transform: translateX(5px);
+		}
+
+		.dropdown-item.active,
+		.dropdown-item:active {
+		  background: var(--primary-red, #BD3136) !important;
+		  color: #fff !important;
+		  font-weight: 600;
+		}
+
+		.dropdown-item:focus {
+		  background: var(--light-red, #F5E6E7);
+		  color: var(--primary-red, #BD3136);
+		  outline: none;
+		}
+
+		/* Dropdown toggle arrow styling */
+		.dropdown-toggle::after {
+		  border-top: 0.3em solid;
+		  border-right: 0.3em solid transparent;
+		  border-left: 0.3em solid transparent;
+		  margin-left: 0.5rem;
+		  transition: transform 0.3s ease;
+		}
+
+		.dropdown-toggle[aria-expanded="true"]::after {
+		  transform: rotate(180deg);
+		}
+
 		/* Accessibility Focus States */
 		.product-card:focus-within {
 		  outline: 3px solid var(--primary-red);
@@ -190,6 +248,9 @@
 					<li class="nav-item text-center">
 						<a class="nav-link" href="index.html#about">About Us</a>
 					</li>
+					<li class="nav-item text-center">
+						<a class="nav-link" href="index.html#valued-partners">Partners</a>
+					</li>
 					<li class="nav-item text-center dropdown">
 						<a class="nav-link dropdown-toggle active" href="index.html#ourProduct" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Products</a>
 						<div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink">
@@ -197,10 +258,13 @@
 						</div>
 					</li>
 					<li class="nav-item text-center">
+						<a class="nav-link" href="index.html#why-choose-us">Why Choose Us</a>
+					</li>
+					<li class="nav-item text-center">
 						<a class="nav-link" href="index.html#feedback">Clients</a>
 					</li>
 					<li class="nav-item text-center">
-						<a class="nav-link" href="#contactus">Contact</a>
+						<a class="nav-link" href="index.html#contactus">Contact</a>
 					</li>
 				</ul>
 			</div>
@@ -246,7 +310,7 @@
 						<div class="underline" style="background: linear-gradient(90deg, var(--primary-red, #BD3136), var(--dark-red, #8B2428)); width: 80px; height: 4px; margin: 0 auto;"></div>
 					</div>
 					<div class="dana-logo text-center my-4">
-						<img src="img/valued-partners/dana-logo.jpg" alt="Dana Incorporated Logo" class="img-fluid" style="max-height: 120px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));">
+						<img src="img/valued-partners/dana-logo.png" alt="Dana Incorporated Logo" class="img-fluid" style="max-height: 120px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));">
 					</div>
 				</div>
 			</div>

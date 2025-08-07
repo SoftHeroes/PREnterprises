@@ -28,7 +28,7 @@ function connectFormSubmit() {
         effect: 'timer',
         text: 'Sending',
         bg: '#00000052',
-        color: '#006eff',
+        color: '#bd3136',
         maxSize: '',
         waitTime: -1,
         textPos: 'vertical',
@@ -36,7 +36,7 @@ function connectFormSubmit() {
         source: '',
         onClose: function () { }
     });
-    $("body *").prop('disabled', true);
+    // $("body *").prop('disabled', true);
 
 
     // sending mail code
