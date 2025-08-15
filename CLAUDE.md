@@ -14,180 +14,92 @@ PR Enterprises is a static business website for an industrial equipment supplier
   - `index.html` - Homepage with company information, services, products overview, and contact
   - `TransmissionAxle.html` - Dedicated product page for transmission and hydraulic systems
   - `Material.html` - Material handling/warehouse equipment page (referenced but not active)
+- **Claude Flow Integration**: AI swarm orchestration capabilities via `claude-flow.config.json`
 
-### File Organization
+### Key Technologies
+- **Frontend**: HTML5, CSS3 (with custom properties), Bootstrap 4, jQuery
+- **Form Handling**: EmailJS (service_id: 'MyGmail', template_id: 'connect')
+- **Animations**: Animate.css, WaitMe overlay plugin
+- **Carousel**: Owl Carousel for client testimonials
+- **Icons**: FontAwesome
+- **Typography**: Google Fonts (Montserrat)
+
+## Commands and Development Tasks
+
+### Testing and Validation
+Since this is a static website with no build process:
+- **Test locally**: Open HTML files directly in browser or use a local server
+- **Form testing**: Verify EmailJS integration in `js/contact.js`
+- **Responsive testing**: Check layouts across different screen sizes
+
+### Claude Flow Commands
+The project includes Claude Flow integration for AI-powered development assistance:
+```bash
+npx claude-flow swarm init --topology hierarchical  # Initialize swarm
+npx claude-flow swarm status                        # Check swarm status
+npx claude-flow task orchestrate "task description" # Run orchestrated tasks
 ```
-/
-├── index.html                 # Main homepage
-├── TransmissionAxle.html     # Product-specific page
-├── css/                      # Stylesheets
-│   ├── style.css            # Main stylesheet with PR Enterprises branding
-│   ├── bootstrap.min.css    # Bootstrap framework
-│   ├── animate.css          # Animation library
-│   └── [other CSS files]    # Various component styles
-├── js/                       # JavaScript functionality
-│   ├── main.js              # Core JS with smooth scrolling and navbar
-│   ├── contact.js           # Contact form submission via EmailJS
-│   ├── jquery-1.12.4.min.js # jQuery library
-│   └── [vendor files]       # Third-party libraries
-├── img/                      # Image assets
-│   ├── dana-products/       # Dana product images
-│   ├── hydraulics-products/ # Hydraulic system images
-│   ├── happy-clients/       # Client logo gallery
-│   ├── valued-partners/     # Partner logos
-│   └── [other assets]      # General images and icons
-└── plugins/                 # Third-party plugins
-    └── waitMe_Overlay/      # Loading overlay plugin
-```
 
-## Design System & Branding
+## High-Level Architecture
 
-### Color Palette (CSS Variables)
+### Contact Form System
+The contact form (`js/contact.js`) implements:
+1. Client-side validation for required fields
+2. Email format validation using regex
+3. WaitMe plugin for loading overlay during submission
+4. EmailJS API integration with hardcoded credentials
+5. Success/failure alerts to user
+
+### Navigation System
+The navigation (`js/main.js`) provides:
+1. Smooth scrolling between page sections
+2. Sticky navbar behavior on scroll
+3. Bootstrap scrollspy integration
+4. Back-to-top button functionality
+
+### Product Display Architecture
+Products are organized in image galleries with:
+1. **Dana Products**: 9 transmission system images in `/img/dana-products/`
+2. **Hydraulics Products**: 8 hydraulic component images in `/img/hydraulics-products/`
+3. CSS Grid layouts with hover overlay effects showing product details
+
+## CSS Design System
+
+The main stylesheet (`css/style.css`) uses CSS custom properties for theming:
 ```css
-:root {
-  --primary-red: #BD3136;    /* Logo red - primary brand color */
-  --dark-red: #8B2428;      /* Darker shade for hover states */
-  --light-red: #F5E6E7;     /* Light tint for backgrounds */
-  --gray-900: #1A1A1A;      /* Dark text */
-  --gray-700: #4A4A4A;      /* Medium text */
-  --gray-500: #7A7A7A;      /* Light text */
-  --gray-300: #DADADA;      /* Borders */
-  --gray-100: #F5F5F5;      /* Light backgrounds */
-}
+--primary-red: #BD3136;  /* Brand color from logo */
+--dark-red: #8B2428;     /* Hover states */
+--light-red: #F5E6E7;    /* Light backgrounds */
 ```
 
-### Key Design Elements
-- **Industrial Theme**: Professional color scheme with red accent color from company logo
-- **Product Cards**: Hover effects with overlay text for product galleries
-- **Responsive Design**: Bootstrap-based grid system
-- **Modern Contact Form**: Floating labels with custom styling
-- **Client Carousel**: Owl Carousel for happy clients section
+## Important Business Context
 
-## Technical Stack
-
-### Frontend Technologies
-- **HTML5**: Semantic markup with accessibility considerations
-- **CSS3**: Custom properties, flexbox, grid, animations
-- **Bootstrap 4**: Responsive grid and components
-- **jQuery**: DOM manipulation and event handling
-- **FontAwesome**: Icon library
-- **Google Fonts**: Montserrat font family
-
-### Third-Party Integrations
-- **EmailJS**: Contact form email delivery (configured with service_id: 'MyGmail')
-- **Owl Carousel**: Client testimonials slider
-- **WaitMe Plugin**: Loading overlays during form submission
-- **Animate.css**: CSS animations
-
-## Key Features
-
-### Contact Form (`contact.js`)
-- Client-side validation for name, email, and message
-- EmailJS integration for form submissions
-- Loading overlay during submission
-- Email validation regex pattern
-- Success/error messaging with alerts
-
-### Navigation & UX (`main.js`)
-- Smooth scrolling between sections
-- Sticky navbar with scroll detection
-- Bootstrap scrollspy for active nav states
-- Back-to-top button functionality
-
-### Product Galleries
-- **Dana Products**: 9 product images with hover overlays
-- **Hydraulics Products**: 8 hydraulic system images
-- **Responsive Image Grid**: CSS Grid with hover effects
-
-## Development Workflow
-
-### Common Development Tasks
-
-#### Updating Company Information
-- Modify contact details in both HTML files
-- Update GSTIN numbers in footer and contact sections
-- Change office addresses in contact sections
-
-#### Adding New Products
-1. Add product images to appropriate `/img/` subfolder
-2. Create new product card HTML structure
-3. Follow existing pattern with hover overlays
-4. Update navigation links if needed
-
-#### Modifying Styles
-- Edit `/css/style.css` for custom styling
-- Use CSS custom properties for consistent theming
-- Maintain responsive design principles
-
-#### Testing Contact Form
-- Verify EmailJS configuration in `contact.js`
-- Test form validation functions
-- Check email delivery to configured recipients
-
-### File Modification Guidelines
-
-#### HTML Files
-- Maintain semantic structure and accessibility
-- Use consistent class naming conventions
-- Keep inline styles minimal (prefer CSS classes)
-- Ensure mobile-responsive image sizing
-
-#### CSS Files
-- Follow existing CSS custom property usage
-- Maintain consistent spacing and typography scales
-- Use modern CSS features (flexbox, grid) where appropriate
-- Keep vendor prefixes for older browser support
-
-#### JavaScript Files
-- Maintain jQuery compatibility
-- Follow existing error handling patterns
-- Keep form validation robust and user-friendly
-- Test across different devices and browsers
-
-## Content Management
-
-### Key Business Information
-- **Established**: 2018
+### Company Details
+- **GSTIN Numbers**: Present in footer and contact sections
 - **Headquarters**: Gurugram, Haryana (Office Unit 642 Satya The Hive Sector 102)
 - **Branch Office**: Bhopal, Madhya Pradesh
-- **Specialization**: Dana Off-Highway, HydraForce & Dantal Hydraulics parts
-- **USP**: 72-hour dispatch assurance, 1000+ satisfied clients
+- **Key Partners**: Dana Off-Highway, HydraForce, Dantal Hydraulics
+
+### Client Logos
+Located in `/img/happy-clients/` - includes major ports, logistics companies, and manufacturers. These are displayed in a carousel on the homepage.
 
 ### Product Categories
 1. **Dana Transmission Series**: TE17000, TE27000, TE30000, TE32000, HR24000, HR32000, HR36000, T12000
 2. **Hydraulic Systems**: Cylinders, pumps, valves, motors, filters, hoses, fittings
 3. **Material Handling**: Dock levelers, hand pallet trucks, lift tables
 
-### Client Base
-- Major ports (Adani, DP World, Gateway Distriparks)
-- Logistics companies (CMA CMG, CONCOR, Navkar Corporation)
-- Industrial manufacturers (JSW, Toyota Kirloskar, P&G)
+## File Modification Guidelines
 
-## SEO & Performance Considerations
+When modifying this codebase:
+- **HTML**: Maintain semantic structure, update both `index.html` and `TransmissionAxle.html` for consistency
+- **CSS**: Use existing custom properties, maintain responsive breakpoints
+- **JavaScript**: Maintain jQuery patterns, ensure EmailJS configuration remains intact
+- **Images**: Add new product images to appropriate subdirectories, maintain naming conventions
 
-### Current Optimizations
-- Semantic HTML structure
-- Responsive images with proper alt attributes
-- Fast loading with minimized assets
-- Clean URL structure
+## Deployment Considerations
 
-### Potential Improvements
-- Add meta descriptions and structured data
-- Implement lazy loading for images
-- Optimize image compression
-- Add Open Graph tags for social sharing
-
-## Browser Support
-
-- Modern browsers (Chrome, Firefox, Safari, Edge)
-- Internet Explorer 11+ (due to CSS custom properties)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-- Bootstrap 4 compatibility ensures broad device support
-
-## Deployment Notes
-
-This is a static website that can be deployed to any web server:
-- No server-side processing required
-- All assets are self-contained
-- EmailJS handles form submissions via client-side JavaScript
-- Suitable for hosting on GitHub Pages, Netlify, or traditional web hosting
+This static website requires:
+- No server-side processing or database
+- EmailJS account for form submissions (credentials in `js/contact.js`)
+- Any static hosting service (GitHub Pages, Netlify, traditional web hosting)
+- All assets are self-contained within the repository
