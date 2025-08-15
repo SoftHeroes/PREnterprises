@@ -45,35 +45,6 @@
 		  --gray-100: #F5F5F5;
 		}
 
-		/* Header & Navigation */
-		.navbar-toggler {
-		  border: none;
-		  padding: 0.5rem;
-		  background: transparent;
-		}
-
-		.navbar-toggler-icon {
-		  display: block;
-		  width: 25px;
-		  height: 3px;
-		  background: #fff;
-		  margin: 5px 0;
-		  transition: all 0.3s ease;
-		  border-radius: 2px;
-		}
-
-		.navbar-toggler:not(.collapsed) .navbar-toggler-icon:nth-child(1) {
-		  transform: rotate(45deg) translate(6px, 6px);
-		}
-
-		.navbar-toggler:not(.collapsed) .navbar-toggler-icon:nth-child(2) {
-		  opacity: 0;
-		}
-
-		.navbar-toggler:not(.collapsed) .navbar-toggler-icon:nth-child(3) {
-		  transform: rotate(-45deg) translate(6px, -6px);
-		}
-
 		/* Sticky Header Enhancement */
 		.navbar.active_sc {
 		  background: rgba(26, 26, 26, 0.95) !important;
@@ -229,7 +200,7 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="60">
 	<div class="se-pre-con"></div>
 	<nav class="navbar navbar-expand-lg fixed-top center-brand static-nav">
-		<div class="container">
+		<div class="container-fluid">
 			<a class="navbar-brand" href="index.html">
 				<div class="row">
 					<img src="img/logo full.png" alt="PR Enterprises Logo" class="logo-default img-fluid">

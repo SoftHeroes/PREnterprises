@@ -45,6 +45,21 @@ $(function ($) {
 		} // End if
 	});
 
+	// Auto-close mobile menu when a nav link is clicked
+	$('.navbar-nav a').on('click', function() {
+		// Check if mobile menu is visible
+		if ($('.navbar-toggler').is(':visible') && !$(this).hasClass('dropdown-toggle')) {
+			$('.navbar-collapse').collapse('hide');
+		}
+	});
+
+	// Close mobile menu when dropdown item is clicked
+	$('.dropdown-item').on('click', function() {
+		if ($('.navbar-toggler').is(':visible')) {
+			$('.navbar-collapse').collapse('hide');
+		}
+	});
+
 	//Scrool bottom to top
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 500) {
