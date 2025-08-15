@@ -30,151 +30,351 @@
 	<!-- <link href="../../../use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900" rel="stylesheet">
 	<script src="js/vendor/modernizr.js"></script>
+	
+	<!-- Modern Industrial Design Enhancements -->
+	<style>
+		/* CSS Variables for consistent theming - Logo Red */
+		:root {
+		  --primary-red: #BD3136;
+		  --dark-red: #8B2428;
+		  --light-red: #F5E6E7;
+		  --gray-900: #1A1A1A;
+		  --gray-700: #4A4A4A;
+		  --gray-500: #7A7A7A;
+		  --gray-300: #DADADA;
+		  --gray-100: #F5F5F5;
+		}
+
+		/* Sticky Header Enhancement */
+		.navbar.active_sc {
+		  background: rgba(26, 26, 26, 0.95) !important;
+		  backdrop-filter: blur(10px);
+		  border-bottom: 2px solid var(--primary-red);
+		  transition: all 0.3s ease;
+		}
+
+		/* Product Cards Modern Design */
+		.product-card {
+		  transition: all 0.3s ease;
+		  will-change: transform;
+		}
+
+		.product-card:hover {
+		  transform: translateY(-10px);
+		  box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+		  border-color: var(--primary-red) !important;
+		}
+
+		.product-card:hover .product-image img {
+		  transform: scale(1.1);
+		}
+
+		.product-card:hover .product-overlay {
+		  opacity: 1 !important;
+		}
+
+		/* Floating Label Form Enhancement */
+		.floating-label-group input:focus,
+		.floating-label-group textarea:focus {
+		  border-color: var(--primary-red) !important;
+		  box-shadow: 0 0 0 3px rgba(189, 49, 54, 0.1);
+		}
+
+		.floating-label-group input:focus + label,
+		.floating-label-group input:valid + label,
+		.floating-label-group textarea:focus + label,
+		.floating-label-group textarea:valid + label {
+		  top: -8px !important;
+		  font-size: 0.85rem !important;
+		  color: var(--primary-red) !important;
+		  font-weight: 600;
+		}
+
+		/* Contact Form Button Enhancement */
+		.contact_form button:hover {
+		  background: linear-gradient(135deg, var(--dark-red), var(--primary-red)) !important;
+		  transform: translateY(-2px);
+		  box-shadow: 0 8px 25px rgba(189, 49, 54, 0.3);
+		}
+
+		/* Footer Social Links */
+		.footer_social a:hover {
+		  background: var(--dark-red) !important;
+		  transform: translateY(-3px);
+		  box-shadow: 0 5px 15px rgba(189, 49, 54, 0.3);
+		}
+
+		/* Mobile Responsiveness */
+		@media (max-width: 768px) {
+		  .hero-title {
+		    font-size: 2.5rem !important;
+		  }
+		  
+		  .hero-stats {
+		    flex-direction: column !important;
+		    gap: 1.5rem !important;
+		  }
+		  
+		  .contact-info {
+		    margin-top: 2rem;
+		  }
+		  
+		  .footer-section {
+		    text-align: center;
+		    margin-bottom: 2rem;
+		  }
+		}
+
+		/* Dropdown Menu Theme Styling */
+		.dropdown-menu {
+		  background: #fff;
+		  border: 1px solid var(--gray-300, #DADADA);
+		  border-radius: 8px;
+		  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+		  padding: 0.5rem 0;
+		  margin-top: 0.5rem;
+		  font-family: 'Montserrat', sans-serif;
+		  min-width: 200px;
+		}
+
+		.dropdown-item {
+		  color: var(--gray-700, #4A4A4A);
+		  padding: 0.75rem 1.5rem;
+		  font-size: 0.95rem;
+		  font-weight: 500;
+		  transition: all 0.3s ease;
+		  border: none;
+		  display: block;
+		  width: 100%;
+		  text-align: left;
+		  background: transparent;
+		  text-decoration: none;
+		}
+
+		.dropdown-item:hover {
+		  background: var(--primary-red, #BD3136) !important;
+		  color: #fff !important;
+		  transform: translateX(5px);
+		}
+
+		.dropdown-item.active,
+		.dropdown-item:active {
+		  background: var(--primary-red, #BD3136) !important;
+		  color: #fff !important;
+		  font-weight: 600;
+		}
+
+		.dropdown-item:focus {
+		  background: var(--light-red, #F5E6E7);
+		  color: var(--primary-red, #BD3136);
+		  outline: none;
+		}
+
+		/* Dropdown toggle arrow styling */
+		.dropdown-toggle::after {
+		  border-top: 0.3em solid;
+		  border-right: 0.3em solid transparent;
+		  border-left: 0.3em solid transparent;
+		  margin-left: 0.5rem;
+		  transition: transform 0.3s ease;
+		}
+
+		.dropdown-toggle[aria-expanded="true"]::after {
+		  transform: rotate(180deg);
+		}
+
+		/* Accessibility Focus States */
+		.product-card:focus-within {
+		  outline: 3px solid var(--primary-red);
+		  outline-offset: 2px;
+		}
+
+		.contact_form input:focus,
+		.contact_form textarea:focus {
+		  outline: 2px solid var(--primary-red);
+		  outline-offset: 2px;
+		}
+	</style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="60">
 	<div class="se-pre-con"></div>
 	<nav class="navbar navbar-expand-lg fixed-top center-brand static-nav">
-		<div class="container">
+		<div class="container-fluid">
 			<a class="navbar-brand" href="index.html">
-				<!-- <h1 style="font-size: 2rem; color:#fff;font-family: comic">PR Enterprises</h1> -->
 				<div class="row">
-					<img src="img/logo full.png" alt="logo" class="logo-default img-fluid">
-					<!-- <h1 class="titleLogo">&nbsp;Enterprises</h1> -->
+					<img src="img/logo full.png" alt="PR Enterprises Logo" class="logo-default img-fluid">
 				</div>
 			</a>
-			<button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#xenav">
-				<i class="fas fa-bars fa-2x" style="font-size:1rem;"></i>
+			<button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#xenav" aria-controls="xenav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				<span class="navbar-toggler-icon"></span>
+				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="xenav">
 				<ul class="navbar-nav ml-auto" id="container">
-					<li class="nav-item text-center ">
-						<a class="nav-link active" href="index.html#home">Home</a>
+					<li class="nav-item text-center">
+						<a class="nav-link" href="index.html#home">Home</a>
 					</li>
-					<!-- <li class="nav-item text-center ">
-							<a class="nav-link" href="index.html#features">Features</a>
-							</li> -->
-					<li class="nav-item text-center ">
+					<li class="nav-item text-center">
 						<a class="nav-link" href="index.html#about">About Us</a>
 					</li>
-					<li class="nav-item text-center  dropdown">
-						<a class="nav-link dropdown-toggle" href="index.html#ourProduct" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Products</a>
-						<div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink">
-							<!-- <a class="dropdown-item" href="Material.html">Material&nbsp;Handling/Warehouse</a> -->
-							<a class="dropdown-item" href="TransmissionAxle.html">Transmission/Axle</a>
+					<li class="nav-item text-center">
+						<a class="nav-link" href="index.html#valued-partners">Partners</a>
+					</li>
+					<li class="nav-item text-center dropdown">
+						<a class="nav-link dropdown-toggle active" href="index.html#ourProduct" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Products</a>
+						<div class="dropdown-menu text-center" style="background-color: #BD3136;" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item active" href="TransmissionAxle.html">Transmission/Axle</a>
 						</div>
+					</li>
+					<li class="nav-item text-center">
+						<a class="nav-link" href="index.html#why-choose-us">Why Choose Us</a>
 					</li>
 					<li class="nav-item text-center">
 						<a class="nav-link" href="index.html#feedback">Clients</a>
 					</li>
-					<!-- <li class="nav-item text-center ">
-							<a class="nav-link" href="index.html#feedback">feedback</a>
-							</li>
-							<li class="nav-item text-center ">
-							<a class="nav-link" href="index.html#blog">blog</a>
-							</li> -->
-					<li class="nav-item text-center ">
-						<a class="nav-link" href="#contactus">contact </a>
+					<li class="nav-item text-center">
+						<a class="nav-link" href="index.html#contactus">Contact</a>
 					</li>
 				</ul>
 			</div>
 		</div>
-		<!--/.CONTAINER-->
 	</nav>
 	<!-- /.navbar -->
 	<!--BANNER-->
-	<header style="background-image: url('img/back1.jpg')">
+	<header class="transmission-hero" style="background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(26, 26, 26, 0.9)), url('img/back1.jpg'); background-size: cover; background-position: center; min-height: 60vh; display: flex; align-items: center;">
 		<div id="particles-js"></div>
 		<div class="container">
 			<div class="row h-100">
-				<div class="col-md-10 align-self-center offset-md-1">
+				<div class="col-md-10 align-self-center offset-md-1 text-center">
 					<div class="banner_text align-self-center">
-						<br /> <br /> <br /> <br /> <br /> <br />
+						<h1 class="hero-title" style="color: #fff; font-size: 3.5rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.2;">Transmission & Hydraulic Solutions</h1>
+						<p class="hero-subtitle" style="color: #F5E6E7; font-size: 1.3rem; margin-bottom: 2rem; font-weight: 300;">Authorized dealer for Dana Off-Highway axles and hydraulic systems</p>
+						<div class="hero-stats" style="display: flex; justify-content: center; gap: 3rem; margin-top: 2rem;">
+							<div class="stat-item" style="text-align: center;">
+								<div class="stat-number" style="color: #fff; font-size: 2rem; font-weight: 700;">100%</div>
+								<div class="stat-label" style="color: #F5E6E7; font-size: 0.9rem;">Genuine Parts</div>
+							</div>
+							<div class="stat-item" style="text-align: center;">
+								<div class="stat-number" style="color: #fff; font-size: 2rem; font-weight: 700;">24/7</div>
+								<div class="stat-label" style="color: #F5E6E7; font-size: 0.9rem;">Support</div>
+							</div>
+							<div class="stat-item" style="text-align: center;">
+								<div class="stat-number" style="color: #fff; font-size: 2rem; font-weight: 700;">500+</div>
+								<div class="stat-label" style="color: #F5E6E7; font-size: 0.9rem;">Products</div>
+							</div>
+						</div>
 					</div>
-					<!--/.banner_text-->
 				</div>
 			</div>
 		</div>
-		<!--/.container-->
 	</header>
-	<!--/BANNER-->
 	<!-- Dana Dealer Section -->
-	<section class="portfolio_sec" id="dana-section">
+	<section class="portfolio_sec" id="dana-section" style="padding: 80px 0; background-color: #fff;">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 text-center mb-4">
+				<div class="col-md-12 text-center mb-5">
 					<div class="title">
-						<h3>Authorised Dealer for Dana Off-Highway domestically manufactured Axles and its spare parts</h3>
-						<div class="underline"></div>
+						<h2 style="color: var(--gray-900, #1A1A1A); font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Dana Off-Highway Solutions</h2>
+						<p style="color: var(--gray-700, #4A4A4A); font-size: 1.1rem; margin-bottom: 2rem;">Authorized dealer for domestically manufactured axles and genuine spare parts</p>
+						<div class="underline" style="background: linear-gradient(90deg, var(--primary-red, #BD3136), var(--dark-red, #8B2428)); width: 80px; height: 4px; margin: 0 auto;"></div>
 					</div>
 					<div class="dana-logo text-center my-4">
-						<img src="img/valued-partners/dana-logo.jpg" alt="Dana Incorporated Logo" class="img-fluid" style="max-height: 120px;">
+						<img src="img/valued-partners/dana-logo.png" alt="Dana Incorporated Logo" class="img-fluid" style="max-height: 120px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));">
 					</div>
 				</div>
 			</div>
 			
 			<!-- Dana Products Gallery -->
 			<div class="row">
-				<div class="col-md-4 wow animate fadeInUp" data-wow-delay="0.1s">
-					<div class="team_single">
-						<div class="team_image">
-							<img class="imgBorder" src="img/dana-products/dana-product-1.jpg" width="375" height="338" alt="Dana Product 1" />
+				<div class="col-md-4 col-sm-6 mb-4 wow animate fadeInUp" data-wow-delay="0.1s">
+					<div class="product-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; border: 2px solid transparent;">
+						<div class="product-image" style="position: relative; overflow: hidden;">
+							<img src="img/dana-products/dana-product-1.jpg" alt="Dana Axle Product 1" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;" />
+							<div class="product-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(189, 49, 54, 0.9), rgba(139, 36, 40, 0.9)); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
+								<span style="color: #fff; font-weight: 600; font-size: 1.1rem;">Dana Axle System</span>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 wow animate fadeInUp" data-wow-delay="0.2s">
-					<div class="team_single">
-						<div class="team_image">
-							<img class="imgBorder" src="img/dana-products/dana-product-2.jpg" width="375" height="338" alt="Dana Product 2" />
+				<div class="col-md-4 col-sm-6 mb-4 wow animate fadeInUp" data-wow-delay="0.2s">
+					<div class="product-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; border: 2px solid transparent;">
+						<div class="product-image" style="position: relative; overflow: hidden;">
+							<img src="img/dana-products/dana-product-2.jpg" alt="Dana Transmission Product 2" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;" />
+							<div class="product-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(189, 49, 54, 0.9), rgba(139, 36, 40, 0.9)); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
+								<span style="color: #fff; font-weight: 600; font-size: 1.1rem;">Dana Axle Assembly</span>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 wow animate fadeInUp" data-wow-delay="0.3s">
-					<div class="team_single">
-						<div class="team_image">
-							<img class="imgBorder" src="img/dana-products/dana-product-3.jpg" width="375" height="338" alt="Dana Product 3" />
+				<div class="col-md-4 col-sm-6 mb-4 wow animate fadeInUp" data-wow-delay="0.3s">
+					<div class="product-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; border: 2px solid transparent;">
+						<div class="product-image" style="position: relative; overflow: hidden;">
+							<img src="img/dana-products/dana-product-3.jpg" alt="Dana Off-Highway Product 3" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;" />
+							<div class="product-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(189, 49, 54, 0.9), rgba(139, 36, 40, 0.9)); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
+								<span style="color: #fff; font-weight: 600; font-size: 1.1rem;">Off-Highway Systems</span>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 wow animate fadeInUp" data-wow-delay="0.4s">
-					<div class="team_single">
-						<div class="team_image">
-							<img class="imgBorder" src="img/dana-products/dana-product-4.jpg" width="375" height="338" alt="Dana Product 4" />
+				<div class="col-md-4 col-sm-6 mb-4 wow animate fadeInUp" data-wow-delay="0.4s">
+					<div class="product-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; border: 2px solid transparent;">
+						<div class="product-image" style="position: relative; overflow: hidden;">
+							<img src="img/dana-products/dana-product-4.jpg" alt="Dana Spare Parts 4" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;" />
+							<div class="product-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(189, 49, 54, 0.9), rgba(139, 36, 40, 0.9)); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
+								<span style="color: #fff; font-weight: 600; font-size: 1.1rem;">Genuine Spare Parts</span>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 wow animate fadeInUp" data-wow-delay="0.5s">
-					<div class="team_single">
-						<div class="team_image">
-							<img class="imgBorder" src="img/dana-products/dana-product-5.jpg" width="375" height="338" alt="Dana Product 5" />
+				<div class="col-md-4 col-sm-6 mb-4 wow animate fadeInUp" data-wow-delay="0.5s">
+					<div class="product-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; border: 2px solid transparent;">
+						<div class="product-image" style="position: relative; overflow: hidden;">
+							<img src="img/dana-products/dana-product-5.jpg" alt="Dana Industrial Product 5" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;" />
+							<div class="product-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(189, 49, 54, 0.9), rgba(139, 36, 40, 0.9)); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
+								<span style="color: #fff; font-weight: 600; font-size: 1.1rem;">Industrial Components</span>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 wow animate fadeInUp" data-wow-delay="0.6s">
-					<div class="team_single">
-						<div class="team_image">
-							<img class="imgBorder" src="img/dana-products/dana-product-6.jpg" width="375" height="338" alt="Dana Product 6" />
+				<div class="col-md-4 col-sm-6 mb-4 wow animate fadeInUp" data-wow-delay="0.6s">
+					<div class="product-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; border: 2px solid transparent;">
+						<div class="product-image" style="position: relative; overflow: hidden;">
+							<img src="img/dana-products/dana-product-6.jpg" alt="Dana Equipment Product 6" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;" />
+							<div class="product-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(189, 49, 54, 0.9), rgba(139, 36, 40, 0.9)); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
+								<span style="color: #fff; font-weight: 600; font-size: 1.1rem;">Heavy Equipment</span>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 wow animate fadeInUp" data-wow-delay="0.7s">
-					<div class="team_single">
-						<div class="team_image">
-							<img class="imgBorder" src="img/dana-products/dana-product-7.jpg" width="375" height="338" alt="Dana Product 7" />
+				<div class="col-md-4 col-sm-6 mb-4 wow animate fadeInUp" data-wow-delay="0.7s">
+					<div class="product-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; border: 2px solid transparent;">
+						<div class="product-image" style="position: relative; overflow: hidden;">
+							<img src="img/dana-products/dana-product-7.jpg" alt="Dana Manufacturing Product 7" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;" />
+							<div class="product-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(189, 49, 54, 0.9), rgba(139, 36, 40, 0.9)); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
+								<span style="color: #fff; font-weight: 600; font-size: 1.1rem;">SLM Machine</span>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 wow animate fadeInUp" data-wow-delay="0.8s">
-					<div class="team_single">
-						<div class="team_image">
-							<img class="imgBorder" src="img/dana-products/dana-product-8.jpg" width="375" height="338" alt="Dana Product 8" />
+				<div class="col-md-4 col-sm-6 mb-4 wow animate fadeInUp" data-wow-delay="0.8s">
+					<div class="product-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; border: 2px solid transparent;">
+						<div class="product-image" style="position: relative; overflow: hidden;">
+							<img src="img/dana-products/dana-product-8.jpg" alt="Dana Machinery Product 8" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;" />
+							<div class="product-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(189, 49, 54, 0.9), rgba(139, 36, 40, 0.9)); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
+								<span style="color: #fff; font-weight: 600; font-size: 1.1rem;">Machinery Solutions</span>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 wow animate fadeInUp" data-wow-delay="0.9s">
-					<div class="team_single">
-						<div class="team_image">
-							<img class="imgBorder" src="img/dana-products/dana-product-9.jpg" width="375" height="338" alt="Dana Product 9" />
+				<div class="col-md-4 col-sm-6 mb-4 wow animate fadeInUp" data-wow-delay="0.9s">
+					<div class="product-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; border: 2px solid transparent;">
+						<div class="product-image" style="position: relative; overflow: hidden;">
+							<img src="img/dana-products/dana-product-9.jpg" alt="Dana Service Product 9" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;" />
+							<div class="product-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(189, 49, 54, 0.9), rgba(139, 36, 40, 0.9)); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
+								<span style="color: #fff; font-weight: 600; font-size: 1.1rem;">Service Support</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -183,76 +383,101 @@
 	</section>
 
 	<!-- Hydraulics Section -->
-	<section class="portfolio_sec" id="hydraulics-section" style="background-color: #f8f9fa;">
+	<section class="portfolio_sec" id="hydraulics-section" style="padding: 80px 0; background-color: var(--gray-100, #F5F5F5);">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 text-center mb-4">
+				<div class="col-md-12 text-center mb-5">
 					<div class="title">
-						<h3>Authorised Dealer for: Hydraulics Cylinders and its spare parts</h3>
-						<div class="underline"></div>
+						<h2 style="color: var(--gray-900, #1A1A1A); font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Hydraulics Systems</h2>
+						<p style="color: var(--gray-700, #4A4A4A); font-size: 1.1rem; margin-bottom: 2rem;">Authorized dealer for hydraulic cylinders and genuine spare parts</p>
+						<div class="underline" style="background: linear-gradient(90deg, var(--primary-red, #BD3136), var(--dark-red, #8B2428)); width: 80px; height: 4px; margin: 0 auto;"></div>
 					</div>
-					<div class="hydraulics-logos text-center my-4">
-						<img src="img/valued-partners/dantal-logo.jpg" alt="Dantal Hydraulics Logo" class="img-fluid mx-3" style="max-height: 100px;">
-						<img src="img/valued-partners/hydraforce-logo.jpg" alt="HydraForce Logo" class="img-fluid mx-3" style="max-height: 100px;">
+					<div class="hydraulics-logos text-center my-4" style="display: flex; justify-content: center; align-items: center; gap: 3rem; flex-wrap: wrap;">
+						<img src="img/valued-partners/dantal-logo.jpg" alt="Dantal Hydraulics Logo" class="img-fluid" style="max-height: 100px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));">
+						<img src="img/valued-partners/hydraforce-logo.jpg" alt="HydraForce Logo" class="img-fluid" style="max-height: 100px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));">
 					</div>
 				</div>
 			</div>
 			
 			<!-- Hydraulics Products Gallery -->
 			<div class="row">
-				<div class="col-md-4 wow animate fadeInUp" data-wow-delay="0.1s">
-					<div class="team_single">
-						<div class="team_image">
-							<img class="imgBorder" src="img/hydraulics-products/hydraulics-1.jpg" width="375" height="338" alt="Hydraulics Product 1" />
+				<div class="col-md-4 col-sm-6 mb-4 wow animate fadeInUp" data-wow-delay="0.1s">
+					<div class="product-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; border: 2px solid transparent;">
+						<div class="product-image" style="position: relative; overflow: hidden;">
+							<img src="img/hydraulics-products/hydraulics-1.jpg" alt="Hydraulic Cylinder 1" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;" />
+							<div class="product-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(189, 49, 54, 0.9), rgba(139, 36, 40, 0.9)); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
+								<span style="color: #fff; font-weight: 600; font-size: 1.1rem;">Hydraulic Cylinders</span>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 wow animate fadeInUp" data-wow-delay="0.2s">
-					<div class="team_single">
-						<div class="team_image">
-							<img class="imgBorder" src="img/hydraulics-products/hydraulics-2.jpg" width="375" height="338" alt="Hydraulics Product 2" />
+				<div class="col-md-4 col-sm-6 mb-4 wow animate fadeInUp" data-wow-delay="0.2s">
+					<div class="product-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; border: 2px solid transparent;">
+						<div class="product-image" style="position: relative; overflow: hidden;">
+							<img src="img/hydraulics-products/hydraulics-2.jpg" alt="Hydraulic Pump 2" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;" />
+							<div class="product-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(189, 49, 54, 0.9), rgba(139, 36, 40, 0.9)); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
+								<span style="color: #fff; font-weight: 600; font-size: 1.1rem;">Hydraulic Pumps</span>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 wow animate fadeInUp" data-wow-delay="0.3s">
-					<div class="team_single">
-						<div class="team_image">
-							<img class="imgBorder" src="img/hydraulics-products/hydraulics-3.jpg" width="375" height="338" alt="Hydraulics Product 3" />
+				<div class="col-md-4 col-sm-6 mb-4 wow animate fadeInUp" data-wow-delay="0.3s">
+					<div class="product-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; border: 2px solid transparent;">
+						<div class="product-image" style="position: relative; overflow: hidden;">
+							<img src="img/hydraulics-products/hydraulics-3.jpg" alt="Hydraulic Valve 3" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;" />
+							<div class="product-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(189, 49, 54, 0.9), rgba(139, 36, 40, 0.9)); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
+								<span style="color: #fff; font-weight: 600; font-size: 1.1rem;">Hydraulic Valves</span>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 wow animate fadeInUp" data-wow-delay="0.4s">
-					<div class="team_single">
-						<div class="team_image">
-							<img class="imgBorder" src="img/hydraulics-products/hydraulics-4.jpg" width="375" height="338" alt="Hydraulics Product 4" />
+				<div class="col-md-4 col-sm-6 mb-4 wow animate fadeInUp" data-wow-delay="0.4s">
+					<div class="product-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; border: 2px solid transparent;">
+						<div class="product-image" style="position: relative; overflow: hidden;">
+							<img src="img/hydraulics-products/hydraulics-4.jpg" alt="Hydraulic Motor 4" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;" />
+							<div class="product-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(189, 49, 54, 0.9), rgba(139, 36, 40, 0.9)); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
+								<span style="color: #fff; font-weight: 600; font-size: 1.1rem;">Hydraulic Motors</span>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 wow animate fadeInUp" data-wow-delay="0.5s">
-					<div class="team_single">
-						<div class="team_image">
-							<img class="imgBorder" src="img/hydraulics-products/hydraulics-5.jpg" width="375" height="338" alt="Hydraulics Product 5" />
+				<div class="col-md-4 col-sm-6 mb-4 wow animate fadeInUp" data-wow-delay="0.5s">
+					<div class="product-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; border: 2px solid transparent;">
+						<div class="product-image" style="position: relative; overflow: hidden;">
+							<img src="img/hydraulics-products/hydraulics-5.jpg" alt="Hydraulic Filter 5" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;" />
+							<div class="product-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(189, 49, 54, 0.9), rgba(139, 36, 40, 0.9)); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
+								<span style="color: #fff; font-weight: 600; font-size: 1.1rem;">Hydraulic Filters</span>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 wow animate fadeInUp" data-wow-delay="0.6s">
-					<div class="team_single">
-						<div class="team_image">
-							<img class="imgBorder" src="img/hydraulics-products/hydraulics-6.jpg" width="375" height="338" alt="Hydraulics Product 6" />
+				<div class="col-md-4 col-sm-6 mb-4 wow animate fadeInUp" data-wow-delay="0.6s">
+					<div class="product-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; border: 2px solid transparent;">
+						<div class="product-image" style="position: relative; overflow: hidden;">
+							<img src="img/hydraulics-products/hydraulics-6.jpg" alt="Hydraulic Hose 6" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;" />
+							<div class="product-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(189, 49, 54, 0.9), rgba(139, 36, 40, 0.9)); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
+								<span style="color: #fff; font-weight: 600; font-size: 1.1rem;">Hydraulic Hoses</span>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 wow animate fadeInUp" data-wow-delay="0.7s">
-					<div class="team_single">
-						<div class="team_image">
-							<img class="imgBorder" src="img/hydraulics-products/hydraulics-7.jpg" width="375" height="338" alt="Hydraulics Product 7" />
+				<div class="col-md-4 col-sm-6 mb-4 wow animate fadeInUp" data-wow-delay="0.7s">
+					<div class="product-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; border: 2px solid transparent;">
+						<div class="product-image" style="position: relative; overflow: hidden;">
+							<img src="img/hydraulics-products/hydraulics-7.jpg" alt="Hydraulic Fitting 7" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;" />
+							<div class="product-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(189, 49, 54, 0.9), rgba(139, 36, 40, 0.9)); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
+								<span style="color: #fff; font-weight: 600; font-size: 1.1rem;">Hydraulic Fittings</span>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 wow animate fadeInUp" data-wow-delay="0.8s">
-					<div class="team_single">
-						<div class="team_image">
-							<img class="imgBorder" src="img/hydraulics-products/hydraulics-8.jpg" width="375" height="338" alt="Hydraulics Product 8" />
+				<div class="col-md-4 col-sm-6 mb-4 wow animate fadeInUp" data-wow-delay="0.8s">
+					<div class="product-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; border: 2px solid transparent;">
+						<div class="product-image" style="position: relative; overflow: hidden;">
+							<img src="img/hydraulics-products/hydraulics-8.jpg" alt="Hydraulic Spare Parts 8" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;" />
+							<div class="product-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(189, 49, 54, 0.9), rgba(139, 36, 40, 0.9)); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
+								<span style="color: #fff; font-weight: 600; font-size: 1.1rem;">Spare Parts</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -266,29 +491,30 @@
 			<div class="row">
 				<div class="col-md-12 text-center mb-5">
 					<div class="title">
-						<h3>100% Ranges Genuine Spares for Dana Transmission Series</h3>
-						<div class="underline"></div>
+						<h2 style="color: var(--gray-900, #1A1A1A); font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Dana Transmission Series</h2>
+						<p style="color: var(--gray-700, #4A4A4A); font-size: 1.1rem; margin-bottom: 2rem;">100% genuine spare parts for complete Dana transmission range</p>
+						<div class="underline" style="background: linear-gradient(90deg, var(--primary-red, #BD3136), var(--dark-red, #8B2428)); width: 80px; height: 4px; margin: 0 auto;"></div>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<div class="dana-series-list" style="background-color: #f8f9fa; padding: 40px; border-radius: 10px;">
+					<div class="dana-series-list" style="background: linear-gradient(135deg, var(--light-blue, #F5E6E7), #fff); padding: 40px; border-radius: 15px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); border: 1px solid var(--gray-300, #DADADA);">
 						<div class="row">
 							<div class="col-md-6">
-								<ul style="list-style: none; padding: 0; font-size: 16px; line-height: 2;">
-									<li><strong>Ø TE17000 Series</strong> - FLT Kone, Kalmar Hyster TIL</li>
-									<li><strong>Ø TE27000 Series</strong> - RST Kone, Hyster TIL, Terex PPM</li>
-									<li><strong>Ø TE32000 Series</strong> - RST Kalmar, Sany Hyster TIL</li>
-									<li><strong>Ø TE30000 Series</strong> - RST Kalmar, Kone, Hyster TIL, Loadstar XCMG, TEREX, SANY</li>
+								<ul style="list-style: none; padding: 0; font-size: 16px; line-height: 2.2; color: var(--gray-900, #1A1A1A);">
+									<li style="border-bottom: 1px solid var(--gray-300, #DADADA); padding: 10px 0; margin-bottom: 10px;"><strong style="color: var(--primary-red, #BD3136);">Ø TE17000 Series</strong> - FLT Kone, Kalmar Hyster TIL</li>
+									<li style="border-bottom: 1px solid var(--gray-300, #DADADA); padding: 10px 0; margin-bottom: 10px;"><strong style="color: var(--primary-red, #BD3136);">Ø TE27000 Series</strong> - RST Kone, Hyster TIL, Terex PPM</li>
+									<li style="border-bottom: 1px solid var(--gray-300, #DADADA); padding: 10px 0; margin-bottom: 10px;"><strong style="color: var(--primary-red, #BD3136);">Ø TE32000 Series</strong> - RST Kalmar, Sany Hyster TIL</li>
+									<li style="padding: 10px 0;"><strong style="color: var(--primary-red, #BD3136);">Ø TE30000 Series</strong> - RST Kalmar, Kone, Hyster TIL, Loadstar XCMG, TEREX, SANY</li>
 								</ul>
 							</div>
 							<div class="col-md-6">
-								<ul style="list-style: none; padding: 0; font-size: 16px; line-height: 2;">
-									<li><strong>Ø HR36000 Series</strong> - Kalmar, SANY</li>
-									<li><strong>Ø HR32000 Series</strong> - Voltas, TIL RT Cranes</li>
-									<li><strong>Ø HR24000 Series</strong> - Voltas, TIL RT Cranes, Normet</li>
-									<li><strong>Ø T12000 Series</strong> - TLD TMX-450 Aircraft Towing Tractor</li>
+								<ul style="list-style: none; padding: 0; font-size: 16px; line-height: 2.2; color: var(--gray-900, #1A1A1A);">
+									<li style="border-bottom: 1px solid var(--gray-300, #DADADA); padding: 10px 0; margin-bottom: 10px;"><strong style="color: var(--primary-red, #BD3136);">Ø HR36000 Series</strong> - Kalmar, SANY</li>
+									<li style="border-bottom: 1px solid var(--gray-300, #DADADA); padding: 10px 0; margin-bottom: 10px;"><strong style="color: var(--primary-red, #BD3136);">Ø HR32000 Series</strong> - Voltas, TIL RT Cranes</li>
+									<li style="border-bottom: 1px solid var(--gray-300, #DADADA); padding: 10px 0; margin-bottom: 10px;"><strong style="color: var(--primary-red, #BD3136);">Ø HR24000 Series</strong> - Voltas, TIL RT Cranes, Normet</li>
+									<li style="padding: 10px 0;"><strong style="color: var(--primary-red, #BD3136);">Ø T12000 Series</strong> - TLD TMX-450 Aircraft Towing Tractor</li>
 								</ul>
 							</div>
 						</div>
@@ -297,116 +523,321 @@
 			</div>
 		</div>
 	</section>
-	<!--CONTACT-->
-	<section class="contacts" id="contactus">
+
+    <!--CONTACT-->
+    <section class="contacts" id="contactus">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-8 offset-md-2">
-					<div class="title">
-						<h3>contact us</h3>
-						<div class="underline"></div>
-					</div>
-					<!--/.title-->
+		  <div class="row">
+			<div class="w-100"></div>
+			<div class="col-md-12">
+			  <div
+				class="contact-form-container"
+				style="
+				  max-width: 1000px;
+				  margin: 0 auto;
+				  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+				  border-radius: 20px;
+				  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+				  overflow: hidden;
+				  border: 1px solid #e9ecef;
+				"
+			  >
+				<!-- Form Header -->
+				<div class="form-header" style="background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%); padding: 30px 40px; text-align: center">
+				  <h3 style="color: #fff; font-size: 1.8rem; font-weight: 700; margin: 0; text-transform: uppercase; letter-spacing: 2px">
+					<i class="fas fa-envelope" style="margin-right: 10px"></i>
+					Get A Quote Today
+				  </h3>
+				  <p style="color: rgba(255, 255, 255, 0.9); margin: 10px 0 0 0; font-size: 1rem">Fill out the form below and we'll get back to you within 24 hours</p>
 				</div>
-				<div class="w-100"></div>
-				<div class="col-md-12 shadow">
+  
+				<!-- Contact Form -->
+				<div class="form-body" style="padding: 40px">
+				  <form class="contact-form">
+					<style>
+					  .contact-form {
+						position: relative;
+					  }
+  
+					  .form-group-enhanced {
+						position: relative;
+						margin-bottom: 25px;
+					  }
+  
+					  .form-group-enhanced .form-icon {
+						position: absolute;
+						left: 15px;
+						top: 50%;
+						transform: translateY(-50%);
+						color: var(--primary-red);
+						font-size: 18px;
+						z-index: 2;
+					  }
+  
+					  .form-group-enhanced.textarea-group .form-icon {
+						top: 20px;
+						transform: none;
+					  }
+  
+					  .contact-form .form-control {
+						padding: 18px 15px 18px 50px;
+						border: 2px solid #e9ecef;
+						border-radius: 12px;
+						font-size: 16px;
+						font-weight: 500;
+						background: #fff;
+						transition: all 0.3s ease;
+						box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+						font-family: "Montserrat", sans-serif;
+					  }
+  
+					  .contact-form textarea.form-control {
+						height: 100px;
+						resize: none;
+						padding-top: 18px;
+					  }
+  
+					  .contact-form .form-control:focus {
+						border-color: var(--primary-red);
+						box-shadow: 0 0 0 3px rgba(189, 49, 54, 0.1);
+						outline: none;
+						background: #fff;
+					  }
+  
+					  .contact-form .form-control::placeholder {
+						color: #6c757d;
+						font-weight: 400;
+					  }
+  
+					  .contact-form .btn-primary-custom {
+						background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
+						border: none;
+						color: #fff;
+						padding: 18px 35px;
+						font-size: 16px;
+						font-weight: 700;
+						border-radius: 12px;
+						transition: all 0.3s ease;
+						text-transform: uppercase;
+						letter-spacing: 1.5px;
+						position: relative;
+						overflow: hidden;
+						box-shadow: 0 8px 25px rgba(189, 49, 54, 0.3);
+					  }
+  
+					  .contact-form .btn-primary-custom:hover {
+						transform: translateY(-3px);
+						box-shadow: 0 12px 35px rgba(189, 49, 54, 0.4);
+					  }
+  
+					  .contact-form .btn-primary-custom:active {
+						transform: translateY(-1px);
+					  }
+  
+					  .contact-form .btn-primary-custom::before {
+						content: "";
+						position: absolute;
+						top: 0;
+						left: -100%;
+						width: 100%;
+						height: 100%;
+						background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+						transition: left 0.5s;
+					  }
+  
+					  .contact-form .btn-primary-custom:hover::before {
+						left: 100%;
+					  }
+  
+					  @media (max-width: 768px) {
+						.form-body {
+						  padding: 30px 20px !important;
+						}
+						.form-header {
+						  padding: 25px 20px !important;
+						}
+						.contact-form .form-control {
+						  margin-bottom: 20px;
+						}
+					  }
+					</style>
+  
 					<div class="row">
-						<div class="col-md-6">
-							<div class="contact_form">
-								<div>
-									<div class="form-group">
-										<label for="name1">Name</label>
-										<input type="text" id="name" name="name" placeholder="Your name here" />
-									</div>
-									<div class="form-group">
-										<label for="email1">Email</label>
-										<input type="email" id="email" name="email" placeholder="Your email here" />
-									</div>
-									<div class="form-group">
-										<label for="message1">Message</label>
-										<textarea id="msg" name="msg" placeholder="Your message here" cols="10" rows="3"></textarea>
-									</div>
-									<button type="button" onclick="connectFormSubmit()">send</button>
-								</div>
-							</div>
+					  <div class="col-sm-6">
+						<div class="form-group-enhanced">
+						  <i class="fas fa-user form-icon"></i>
+						  <input type="text" id="name" name="name" class="form-control" placeholder="Your Full Name" required />
 						</div>
-						<div class="col-md-5 offset-md-1">
-							<div class="contact_right_single">
-								<img src="img/icon/contact1.png" alt="" />
-								<p>+91 124-7174320&nbsp;&nbsp;&nbsp;+91 7302627560
-								</p>
-							</div>
-							<!--/.contact_right_single-->
-							<div class="contact_right_single">
-								<img src="img/icon/contact2.png" alt="" />
-								<p>
-									info@prenterpriseco.com
-									<!-- m.krishna@prenterpriseco.com -->
-								</p>
-							</div>
-							<!--/.contact_right_single-->
-							<div class="contact_right_single" style="height: 280px;">
-								<div class="Address">
-									<img src="img/icon/contact3.png" alt="" />
-									<div class="row">
-										<p style="font-weight: bold; color: #2c3e50; margin-bottom: 10px;">
-											<strong>HO Office:</strong>
-										</p>
-										<p style="margin-bottom: 8px;">
-											Office Unit 642 Satya The Hive Sector 102<br>
-											Dwarka Express Way Gurugram - 122505 (Haryana)<br>
-											<strong>GSTIN:</strong> 06BKZPP1525R1Z6
-										</p>
-										
-										<p style="font-weight: bold; color: #2c3e50; margin-top: 20px; margin-bottom: 10px;">
-											<strong>Bhopal Office:</strong>
-										</p>
-										<p style="margin-bottom: 15px;">
-											Office Unit E-417, Sagar Q Eden Garden Phase<br>
-											Opposite Aryan Banglow, Hoshangabad Road<br>
-											Bhopal - 462026<br>
-											<strong>GSTIN:</strong> 23BKZPP1525R1ZA
-										</p>
-										
-										<p style="font-weight: bold; color: #e74c3c; font-size: 16px; text-align: center; margin-top: 15px;">
-											"MAKE ONE CALL - WE STOCK IT ALL!"
-										</p>
-									</div>
-								</div>
-							</div>
-							<!--/.contact_right_single-->
+					  </div>
+					  <div class="col-sm-6">
+						<div class="form-group-enhanced">
+						  <i class="fas fa-envelope form-icon"></i>
+						  <input type="email" id="email" name="email" class="form-control" placeholder="Email Address" required />
 						</div>
+					  </div>
 					</div>
+					<div class="row">
+					  <div class="col-sm-6">
+						<div class="form-group-enhanced">
+						  <i class="fas fa-phone form-icon"></i>
+						  <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone Number" />
+						</div>
+					  </div>
+					  <div class="col-sm-6">
+						<div class="form-group-enhanced">
+						  <i class="fas fa-building form-icon"></i>
+						  <input type="text" id="company" name="company" class="form-control" placeholder="Company Name" />
+						</div>
+					  </div>
+					</div>
+					<div class="row">
+					  <div class="col-sm-12">
+						<div class="form-group-enhanced textarea-group">
+						  <i class="fas fa-comment-dots form-icon"></i>
+						  <textarea id="msg" name="msg" class="form-control" placeholder="Tell us about your requirements..." rows="1" required></textarea>
+						</div>
+					  </div>
+					</div>
+					<div class="row">
+					  <div class="col-sm-12">
+						<button type="button" class="btn btn-primary-custom btn-block" onclick="connectFormSubmit()">
+						  <i class="fas fa-paper-plane" style="margin-right: 8px"></i>
+						  Send Message
+						</button>
+					  </div>
+					</div>
+				  </form>
 				</div>
+			  </div>
 			</div>
+		  </div>
 		</div>
 		<!--/.container-->
-	</section>
-	<!--/CONTACT-->
+	  </section>
+	  <!--/CONTACT-->
+
 	<!--FOOTER-->
-	<footer class="footers">
+	<footer class="modern-footer">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="copy_right">
-						<p>© 2020 All rights reserved </p>
-					</div>
+		  <div class="row">
+			<!-- Column 1: Company Info -->
+			<div class="col-lg-3 col-md-6 mb-4">
+			  <div class="footer-column">
+				<img src="img/logo full.png" alt="PR Enterprises Logo" class="footer-logo mb-3" style="max-width: 150px" />
+				<p class="footer-description">Leading provider of genuine Dana Off-Highway, HydraForce & Dantal Hydraulics spare parts with excellence in industrial equipment solutions.</p>
+				<div class="certifications mt-3">
+				  <h6 class="footer-subtitle">Certifications</h6>
+				  <p class="certification-text">Authorized Dealer<br />ISO Compliant Warehouse<br />72-Hour Dispatch Guarantee</p>
 				</div>
-				<div class="col-md-6">
-					<div class="footer_social">
-						<ul>
-							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-							<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-						</ul>
-					</div>
+			  </div>
+			  <!-- Social Links (Compact) -->
+			  <div class="social-links" style="margin-top: 24px; margin-left: 12px">
+				  <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+				  <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+				  <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+				  <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
 				</div>
 			</div>
+			
+  
+			<!-- Column 2: Quick Links -->
+			<div class="col-lg-3 col-md-6 mb-4">
+			  <div class="footer-column">
+				<h5 class="footer-title">Quick Links</h5>
+				<ul class="footer-links">
+				  <li><a href="#home">Home</a></li>
+				  <li><a href="#about">About Us</a></li>
+				  <li><a href="#ourProduct">Our Products</a></li>
+				  <li><a href="#why-choose-us">Why Choose Us</a></li>
+				  <li><a href="#feedback">Our Clients</a></li>
+				  <li><a href="#contactus">Contact</a></li>
+				</ul>
+			  </div>
+			</div>
+  
+			<!-- Column 3: Products -->
+			<div class="col-lg-3 col-md-6 mb-4">
+			  <div class="footer-column">
+				<h5 class="footer-title">Our Products</h5>
+				<ul class="footer-links">
+				  <li><a href="#ourProduct">Dana Axles & Transmission</a></li>
+				  <li><a href="#ourProduct">Hydraulic Cylinders</a></li>
+				  <li><a href="#ourProduct">Dock Levelers</a></li>
+				  <li><a href="#ourProduct">Hand Pallet Trucks</a></li>
+				  <li><a href="#ourProduct">Lift Tables</a></li>
+				  <li><a href="#ourProduct">Spare Parts</a></li>
+				</ul>
+			  </div>
+			</div>
+  
+			<!-- Column 4: Contact Information (Optimized) -->
+			<div class="col-lg-3 col-md-6 mb-4">
+			  <div class="footer-column">
+				<h5 class="footer-title">Contact Information</h5>
+  
+				<!-- Phone Numbers (Compact) -->
+				<div class="contact-section mb-2">
+				  <h6 style="color: var(--primary-red); font-weight: 600; margin-bottom: 8px; font-size: 0.9rem">
+					<i class="fas fa-phone" style="margin-right: 8px"></i>Phone Numbers
+				  </h6>
+				  <div style="margin-left: 16px; line-height: 1.3">
+					<span style="font-size: 12px; color: #666; display: block; margin-bottom: 2px">+91 124 7111744 | +91 124 7174320</span>
+					<span style="font-size: 12px; color: #666; display: block; margin-bottom: 2px">+91 7302627560 | +91 7838646074</span>
+				  </div>
+				</div>
+  
+				<!-- Email (Compact)-->
+				<div class="contact-section mb-2">
+				  <h6 style="color: var(--primary-red); font-weight: 600; margin-bottom: 8px; font-size: 0.9rem">
+					<i class="fas fa-envelope" style="margin-right: 8px"></i>Email
+				  </h6>
+				  <div style="margin-left: 16px">
+					<a href="mailto:info@prenterpriseco.com" style="font-size: 13px; color: var(--primary-red); text-decoration: none">
+					  info@prenterpriseco.com
+					</a>
+				  </div>
+				</div>
+  
+				<!-- Offices (Compact) -->
+				<div class="contact-section mb-2">
+				  <h6 style="color: var(--primary-red); font-weight: 600; margin-bottom: 8px; font-size: 0.9rem">
+					<i class="fas fa-building" style="margin-right: 8px"></i>Our Offices
+				  </h6>
+				  <div style="margin-left: 16px; font-size: 12px; color: #666; line-height: 1.3">
+					<div style="margin-bottom: 8px">
+					  <strong style="color: #333; font-size: 12px">HO Office - Gurugram</strong><br>
+					  Unit 642 Satya The Hive Sector 102<br>
+					  Gurugram - 122505 (Haryana)<br>
+					  <small style="color: var(--primary-red)">GSTIN: 06BKZPP1525R1Z6</small>
+					</div>
+					<div style="margin-bottom: 8px">
+					  <strong style="color: #333; font-size: 12px">Bhopal Office</strong><br>
+					  Unit E-417, Sagar Q Eden Garden<br>
+					  Bhopal - 462026<br>
+					  <small style="color: var(--primary-red)">GSTIN: 23BKZPP1525R1ZA</small>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+  
+		  <!-- Footer Bottom -->
+		  <hr class="footer-divider" />
+		  <div class="row">
+			<div class="col-md-8">
+			  <div class="copyright">
+				<p>© 2024 PR Enterprises. All rights reserved. | <strong>"MAKE ONE CALL - WE STOCK IT ALL!"</strong></p>
+			  </div>
+			</div>
+			<div class="col-md-4">
+			  <div class="footer-tagline">
+				<p class="mb-0">Trusted Partner in Industrial Solutions</p>
+			  </div>
+			</div>
+		  </div>
 		</div>
-		<!--/.container-->
-	</footer>
-	<!--/FOOTER-->
+	  </footer>
 	<a href="#" class="scrollup"><i class="fas fa-arrow-up fa-2x"></i></a>
 	<script src="js/jquery-1.12.4.min.js"></script>
 	<script src="js/vendor/bootstrap.min.js"></script>
