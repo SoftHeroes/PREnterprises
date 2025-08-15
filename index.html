@@ -34,6 +34,80 @@
 
   <body data-spy="scroll" data-target=".navbar" data-offset="60">
     <div class="se-pre-con"></div>
+    
+    <!-- Brochure Download Modal -->
+    <div class="modal fade" id="brochureModal" tabindex="-1" role="dialog" aria-labelledby="brochureModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content brochure-modal-content">
+          <!-- Simple Header with Close Button -->
+          <div class="modal-header brochure-modal-header-simple">
+            <button type="button" class="close modal-close-btn" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          
+          <!-- Modal Body -->
+          <div class="modal-body brochure-modal-body-compact">
+            <div class="modal-title-compact">
+              <h5 class="mb-3">Get Our Free Brochure</h5>
+              <p class="text-muted small mb-4">Download our comprehensive product catalog</p>
+            </div>
+            
+            <form id="brochureForm" class="brochure-form">
+              <div class="form-group brochure-form-group-compact">
+                <input 
+                  type="email" 
+                  class="form-control brochure-input-compact" 
+                  id="brochureEmail" 
+                  name="brochureEmail" 
+                  placeholder="Enter your email address"
+                  required
+                  autocomplete="email"
+                >
+                <div class="invalid-feedback" id="emailError"></div>
+              </div>
+              
+              <div class="form-group brochure-form-group-compact">
+                <input 
+                  type="text" 
+                  class="form-control brochure-input-compact" 
+                  id="brochureName" 
+                  name="brochureName" 
+                  placeholder="Your name (optional)"
+                  autocomplete="name"
+                >
+              </div>
+              
+              <div class="form-group brochure-form-group-compact">
+                <input 
+                  type="text" 
+                  class="form-control brochure-input-compact" 
+                  id="brochureCompany" 
+                  name="brochureCompany" 
+                  placeholder="Company name (optional)"
+                  autocomplete="organization"
+                >
+              </div>    
+            </form>
+          </div>
+          
+          <!-- Simplified Footer -->
+          <div class="modal-footer brochure-modal-footer-simple">
+            <button type="button" class="btn btn-primary brochure-btn-primary-compact">
+              <i class="fas fa-download mr-2"></i>
+              <span class="btn-text">Get Brochure</span>
+              <div class="btn-loader" style="display: none;">
+                <i class="fas fa-spinner fa-spin"></i>
+              </div>
+            </button>
+            <button type="button" class="btn btn-link btn-sm text-muted mt-2" data-dismiss="modal">
+              No thanks
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Brochure Download Modal -->
     <nav class="navbar navbar-expand-lg fixed-top center-brand static-nav">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
@@ -1210,6 +1284,7 @@
     <script src="js/main.js"></script>
     <script src="js/scrolling.js"></script>
     <script src="js/contact.js"></script>
+    <script src="js/brochure-modal.js"></script>
     <!-- font Awesome -->
     <script src="https://kit.fontawesome.com/c645529b0c.js"></script>
     <!-- waitMe_Overlay -->
